@@ -1,17 +1,90 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Shield, Users, Award, Building } from "lucide-react";
+import {
+  ArrowRight, Shield, Users, Award, Building, Search, MapPin, Home,
+  Handshake, FileCheck, Eye, TrendingUp, ChevronRight, Star, HelpCircle,
+} from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import { projects } from "@/data/projects";
 import ProjectCard from "@/components/ProjectCard";
 import SectionHeading from "@/components/SectionHeading";
 import EnquiryForm from "@/components/EnquiryForm";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const stats = [
   { icon: Award, value: "15+", label: "Years Experience" },
   { icon: Users, value: "2,500+", label: "Happy Customers" },
   { icon: Building, value: "25+", label: "Projects Delivered" },
   { icon: Shield, value: "100%", label: "Clear Titles" },
+];
+
+const services = [
+  { icon: Search, title: "Plot Consultation", desc: "We understand your requirements and recommend the best open plots based on budget, location, and investment goals." },
+  { icon: Eye, title: "Site Visit Assistance", desc: "We arrange guided site visits so you can explore projects and evaluate options before making decisions." },
+  { icon: FileCheck, title: "Legal & Title Verification", desc: "Complete information about DTCP approvals, title clearance, land documentation, and legal compliance." },
+  { icon: Handshake, title: "End-to-End Buying Support", desc: "From plot selection to registration, our team ensures a smooth and hassle-free buying experience." },
+  { icon: TrendingUp, title: "Investment Advisory", desc: "We help investors identify high-growth corridors and future hotspots in Telangana for maximum ROI." },
+  { icon: Home, title: "Post-Sale Support", desc: "Continued assistance with construction guidance, resale support, and property management after purchase." },
+];
+
+const whyChoose = [
+  "100% DTCP & RERA Approved Projects",
+  "Transparent & Clear Title Documentation",
+  "15+ Years of Industry Experience",
+  "Trusted by 2,500+ Happy Families",
+  "Prime Locations with High Appreciation",
+  "World-Class Infrastructure & Amenities",
+  "Professional Property Advisors",
+];
+
+const investmentZones = [
+  { name: "Shadnagar", growth: "Very High", roi: "15-20%" },
+  { name: "Kandukur", growth: "High", roi: "12-16%" },
+  { name: "Yadagirigutta", growth: "High", roi: "12-15%" },
+  { name: "Srisailam Highway", growth: "Emerging", roi: "10-15%" },
+  { name: "Hyderabad Highway", growth: "Very High", roi: "14-18%" },
+  { name: "Bhongir", growth: "Moderate", roi: "8-12%" },
+];
+
+const processSteps = [
+  { num: "01", title: "Understanding Requirement", desc: "We listen to your needs, budget, and preferences." },
+  { num: "02", title: "Plot Shortlisting", desc: "We curate the best options matching your criteria." },
+  { num: "03", title: "Project Explanation", desc: "Detailed insights on approvals, amenities, and pricing." },
+  { num: "04", title: "Site Visit", desc: "Guided visits to explore projects firsthand." },
+  { num: "05", title: "Documentation Support", desc: "We handle all paperwork and legal verification." },
+  { num: "06", title: "Registration & Handover", desc: "Complete booking and registration assistance." },
+];
+
+const testimonials = [
+  {
+    text: "Indra Properties helped us find the perfect plot near Shadnagar. Their guidance made the process very easy and stress-free. Highly recommended!",
+    name: "Rajesh Kumar",
+    location: "Shadnagar",
+  },
+  {
+    text: "Very transparent dealings and excellent infrastructure in their projects. We invested in Indra Golden City and are very happy with the appreciation.",
+    name: "Priya Sharma",
+    location: "Hyderabad",
+  },
+  {
+    text: "The team was professional and supportive throughout. Clear titles, proper documentation — everything was smooth. Best real estate company in Telangana!",
+    name: "Venkata Rao",
+    location: "Kandukur",
+  },
+];
+
+const faqs = [
+  { q: "Are all your projects DTCP approved?", a: "Yes, all our projects are 100% DTCP approved with clear title documentation. We ensure complete legal compliance for every project." },
+  { q: "What is the minimum investment required?", a: "Our plots start from ₹9,999/sq.yd onwards depending on the project location. We have options to suit various budgets." },
+  { q: "Do you arrange site visits?", a: "Absolutely! We provide free guided site visits with pickup and drop facility from Hyderabad for all our projects." },
+  { q: "What areas do your projects cover?", a: "We have projects across key growth corridors in Telangana including Shadnagar, Kandukur, Yadagirigutta, and Hyderabad Highway." },
+  { q: "Do you help with bank loans?", a: "Yes, we have tie-ups with major banks and can assist with home/plot loan approvals for eligible customers." },
+  { q: "What is the booking process?", a: "You can book a plot with a token advance. Our team handles all documentation, legal verification, and registration process end-to-end." },
 ];
 
 const Index = () => {
@@ -65,17 +138,15 @@ const Index = () => {
               to="/projects"
               className="bg-gold-gradient text-primary-foreground px-8 py-3.5 rounded-md font-body font-semibold text-sm tracking-wide flex items-center justify-center gap-2 hover:opacity-90 transition-opacity"
             >
-              View Projects
+              Explore Projects
               <ArrowRight className="w-4 h-4" />
             </Link>
-            <a
-              href="https://wa.me/919876543210?text=Hi%2C%20I%20am%20interested%20in%20Indra%20Properties%20plots."
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/contact"
               className="border border-gold text-primary px-8 py-3.5 rounded-md font-body font-semibold text-sm tracking-wide hover:bg-primary hover:text-primary-foreground transition-all"
             >
-              Contact on WhatsApp
-            </a>
+              Book Free Consultation
+            </Link>
           </motion.div>
         </div>
       </section>
@@ -83,26 +154,97 @@ const Index = () => {
       {/* About Intro */}
       <section className="py-20 bg-navy-gradient">
         <div className="container mx-auto px-4">
-          <SectionHeading
-            title="Welcome to Indra Properties"
-            subtitle="With over 15 years of trust and excellence, we are one of the leading real estate developers specializing in premium open plots across Telangana."
-          />
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
-            {stats.map((stat, i) => (
-              <motion.div
-                key={stat.label}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                className="text-primary font-body text-xs tracking-[0.25em] uppercase mb-3"
+              >
+                Who We Are
+              </motion.p>
+              <motion.h2
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.1, duration: 0.5 }}
-                className="glass-card rounded-lg p-6 text-center"
+                className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6"
               >
-                <stat.icon className="w-8 h-8 text-primary mx-auto mb-3" />
-                <p className="text-3xl font-display font-bold text-foreground">
-                  {stat.value}
-                </p>
-                <p className="text-muted-foreground text-sm font-body mt-1">
-                  {stat.label}
+                Trusted Real Estate
+                <br />
+                <span className="text-gold-gradient">Developers in Telangana</span>
+              </motion.h2>
+              <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="text-muted-foreground font-body leading-relaxed mb-4"
+              >
+                With over 15 years of trust and excellence, Indra Properties is one of the leading
+                real estate developers specializing in premium open plots across Telangana's
+                fastest-growing corridors.
+              </motion.p>
+              <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3 }}
+                className="text-muted-foreground font-body leading-relaxed"
+              >
+                Whether you're looking for a dream home site or a smart investment, our team ensures
+                you get the best plot options with 100% legal clearance and world-class infrastructure.
+              </motion.p>
+            </div>
+            <div className="grid grid-cols-2 gap-5">
+              {stats.map((stat, i) => (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1, duration: 0.5 }}
+                  className="glass-card rounded-lg p-6 text-center"
+                >
+                  <stat.icon className="w-8 h-8 text-primary mx-auto mb-3" />
+                  <p className="text-3xl font-display font-bold text-foreground">
+                    {stat.value}
+                  </p>
+                  <p className="text-muted-foreground text-sm font-body mt-1">
+                    {stat.label}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <SectionHeading
+            title="Our Services"
+            subtitle="Complete Real Estate Guidance — From Plot Selection to Registration"
+          />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {services.map((svc, i) => (
+              <motion.div
+                key={svc.title}
+                initial={{ opacity: 0, y: 25 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08, duration: 0.5 }}
+                className="glass-card rounded-lg p-6 group hover:shadow-gold transition-all duration-300"
+              >
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                  <svc.icon className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="font-display text-lg font-semibold text-foreground mb-2">
+                  {svc.title}
+                </h3>
+                <p className="text-muted-foreground font-body text-sm leading-relaxed">
+                  {svc.desc}
                 </p>
               </motion.div>
             ))}
@@ -110,12 +252,12 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Projects Preview */}
-      <section className="py-20">
+      {/* Featured Projects */}
+      <section className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
           <SectionHeading
-            title="Our Premium Projects"
-            subtitle="Explore handpicked open plot developments in Telangana's fastest-growing corridors."
+            title="Featured Projects"
+            subtitle="Discover the Best Open Plot Projects in Telangana"
           />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, i) => (
@@ -134,11 +276,180 @@ const Index = () => {
         </div>
       </section>
 
-      {/* CTA + Form */}
+      {/* Why Choose Us */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <SectionHeading
+            title="Why Choose Indra Properties?"
+            subtitle="The Smart Way to Invest in Land"
+          />
+          <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {whyChoose.map((item, i) => (
+              <motion.div
+                key={item}
+                initial={{ opacity: 0, x: i % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.06 }}
+                className="flex items-center gap-3 glass-card rounded-lg px-5 py-4"
+              >
+                <Shield className="w-5 h-5 text-primary shrink-0" />
+                <span className="text-foreground font-body text-sm font-medium">{item}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Investment Zones */}
+      <section className="py-20 bg-navy-gradient">
+        <div className="container mx-auto px-4">
+          <SectionHeading
+            title="Telangana's Hottest Investment Zones"
+            subtitle="Invest in high-growth corridors with excellent appreciation potential."
+          />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {investmentZones.map((zone, i) => (
+              <motion.div
+                key={zone.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08 }}
+                className="glass-card rounded-lg p-5 hover:shadow-gold transition-all"
+              >
+                <div className="flex items-center gap-2 mb-3">
+                  <MapPin className="w-4 h-4 text-primary" />
+                  <h3 className="font-display text-lg font-semibold text-foreground">{zone.name}</h3>
+                </div>
+                <div className="flex justify-between text-sm font-body">
+                  <div>
+                    <p className="text-muted-foreground text-xs">Growth Potential</p>
+                    <p className={`font-semibold ${zone.growth === "Very High" ? "text-green-400" : zone.growth === "High" ? "text-primary" : "text-muted-foreground"}`}>
+                      {zone.growth}
+                    </p>
+                  </div>
+                  <div className="text-right">
+                    <p className="text-muted-foreground text-xs">Expected ROI</p>
+                    <p className="font-semibold text-primary">{zone.roi}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* How We Work */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <SectionHeading
+            title="How We Work"
+            subtitle="Simple & Transparent Process"
+          />
+          <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {processSteps.map((step, i) => (
+              <motion.div
+                key={step.num}
+                initial={{ opacity: 0, y: 25 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08 }}
+                className="glass-card rounded-lg p-6 relative overflow-hidden"
+              >
+                <span className="absolute top-3 right-4 text-4xl font-display font-bold text-primary/10">
+                  {step.num}
+                </span>
+                <div className="w-10 h-10 rounded-full bg-gold-gradient flex items-center justify-center text-primary-foreground font-body font-bold text-sm mb-4">
+                  {step.num}
+                </div>
+                <h3 className="font-display text-base font-semibold text-foreground mb-2">
+                  {step.title}
+                </h3>
+                <p className="text-muted-foreground font-body text-sm">{step.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
       <section className="py-20 bg-secondary">
+        <div className="container mx-auto px-4">
+          <SectionHeading
+            title="What Our Clients Say"
+            subtitle="Testimonials from happy customers"
+          />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {testimonials.map((t, i) => (
+              <motion.div
+                key={t.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.12 }}
+                className="glass-card rounded-lg p-6"
+              >
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, j) => (
+                    <Star key={j} className="w-4 h-4 text-primary fill-primary" />
+                  ))}
+                </div>
+                <p className="text-muted-foreground font-body text-sm leading-relaxed italic mb-5">
+                  "{t.text}"
+                </p>
+                <div className="border-t border-border pt-4">
+                  <p className="font-display font-semibold text-foreground text-sm">{t.name}</p>
+                  <p className="text-muted-foreground text-xs font-body flex items-center gap-1">
+                    <MapPin className="w-3 h-3" /> {t.location}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <SectionHeading
+            title="Frequently Asked Questions"
+          />
+          <div className="max-w-3xl mx-auto">
+            <Accordion type="single" collapsible className="space-y-3">
+              {faqs.map((faq, i) => (
+                <AccordionItem
+                  key={i}
+                  value={`faq-${i}`}
+                  className="glass-card rounded-lg border-none px-6"
+                >
+                  <AccordionTrigger className="font-body text-sm font-medium text-foreground hover:text-primary hover:no-underline py-4">
+                    {faq.q}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground font-body text-sm pb-4">
+                    {faq.a}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA + Form */}
+      <section className="py-20 bg-navy-gradient">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
+              <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                className="text-primary font-body text-xs tracking-[0.25em] uppercase mb-3"
+              >
+                Get Expert Guidance
+              </motion.p>
               <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
                 Ready to Invest in
                 <br />
@@ -149,12 +460,26 @@ const Index = () => {
                 free site visit today and take the first step toward your dream
                 property.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="space-y-4">
+                <div className="flex items-center gap-3 text-foreground font-body text-sm">
+                  <MapPin className="w-4 h-4 text-primary shrink-0" />
+                  Hyderabad, Telangana
+                </div>
+                <a href="tel:+919876543210" className="flex items-center gap-3 text-foreground font-body text-sm hover:text-primary transition-colors">
+                  <ChevronRight className="w-4 h-4 text-primary shrink-0" />
+                  +91 98765 43210
+                </a>
+                <a href="mailto:info@indraproperties.com" className="flex items-center gap-3 text-foreground font-body text-sm hover:text-primary transition-colors">
+                  <ChevronRight className="w-4 h-4 text-primary shrink-0" />
+                  info@indraproperties.com
+                </a>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4 mt-8">
                 <a
                   href="tel:+919876543210"
                   className="bg-gold-gradient text-primary-foreground px-6 py-3 rounded-md font-body font-semibold text-sm text-center"
                 >
-                  📞 Call: +91 98765 43210
+                  📞 Call Now
                 </a>
                 <a
                   href="https://wa.me/919876543210"
