@@ -21,9 +21,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center gap-2">
-            <span className="text-2xl font-display font-bold text-gold-gradient">
-              Indra Properties
-            </span>
+            <img src={logo} alt="Indra Properties" className="h-14 w-auto" />
           </Link>
 
           <div className="hidden lg:flex items-center gap-8">
