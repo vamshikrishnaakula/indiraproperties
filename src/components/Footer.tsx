@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
+import logo from "@/assets/logo.jpg";
 
 const Footer = () => {
   return (
@@ -7,9 +8,9 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
-            <h3 className="text-2xl font-display font-bold text-gold-gradient mb-4">
-              Indra Properties
-            </h3>
+            <Link to="/">
+              <img src={logo} alt="Indra Properties" className="h-16 w-auto mb-4" />
+            </Link>
             <p className="text-muted-foreground font-body text-sm leading-relaxed">
               Turning dreams into reality with premium open plots and land
               investments across prime locations.
