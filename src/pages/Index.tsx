@@ -95,8 +95,18 @@ const Index = () => {
     <div className="min-h-screen">
       {/* Hero */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <video
+        {/* <video
           src={heroBg}
+          alt="Indra Properties premium open plots"
+          className="absolute inset-0 w-full h-full object-cover"
+          width={1920}
+          height={1080}
+          autoPlay
+          loop
+          muted
+        /> */}
+        <video
+          src="https://res.cloudinary.com/dakwcewks/video/upload/main-video-DFRO3I1J_e072hl.mp4"
           alt="Indra Properties premium open plots"
           className="absolute inset-0 w-full h-full object-cover"
           width={1920}
@@ -339,7 +349,7 @@ const Index = () => {
       {/* How We Work */}
       <section className="relative py-20 overflow-hidden">
         <video
-          src={herowhiteBg}
+          src="https://res.cloudinary.com/dakwcewks/video/upload/vid1-BZS_rmrF_aadta4.mp4"
           alt="Indra Properties premium"
           className="absolute inset-0 w-full h-full object-cover"
           width={1920}
