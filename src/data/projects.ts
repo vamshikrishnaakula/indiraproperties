@@ -21,7 +21,7 @@ export const projects: Project[] = [
   {
     id: "indra-golden-city",
     name: "Indra Golden City",
-    location: "Hyderabad Highway, Shadnagar",
+    location: "Hyderabad Highway, Vizag",
     price: "₹15,999/sq.yd onwards",
     image: project1,
     description:
@@ -38,7 +38,7 @@ export const projects: Project[] = [
     ],
     locationAdvantages: [
       "5 mins from NH-44 Hyderabad Highway",
-      "10 mins from Shadnagar Town",
+      "10 mins from Vizag Town",
       "Near Proposed Pharma City",
       "Close to Educational Institutions",
       "Upcoming Metro Connectivity",
@@ -85,11 +85,11 @@ export const projects: Project[] = [
   {
     id: "indra-hill-view",
     name: "Indra Hill View",
-    location: "Yadagirigutta, Yadadri",
+    location: "Amaravathi, Yadadri",
     price: "₹12,499/sq.yd onwards",
     image: project3,
     description:
-      "Perched at a scenic hilltop location near the holy Yadagirigutta temple, Indra Hill View offers breathtaking panoramic views and a unique lifestyle opportunity. Fully developed plots with premium infrastructure in a rapidly appreciating zone.",
+      "Perched at a scenic hilltop location near the holy Amaravathi temple, Indra Hill View offers breathtaking panoramic views and a unique lifestyle opportunity. Fully developed plots with premium infrastructure in a rapidly appreciating zone.",
     amenities: [
       "Panoramic Hill Views",
       "Gated & Secured Layout",
@@ -101,9 +101,9 @@ export const projects: Project[] = [
       "24/7 Water Supply",
     ],
     locationAdvantages: [
-      "3 km from Yadagirigutta Temple",
+      "3 km from Amaravathi Temple",
       "Near Regional Ring Road",
-      "20 mins from Bhongir",
+      "20 mins from Guntur",
       "Close to Upcoming Airport City",
       "Near NIMZ Industrial Zone",
       "Excellent Capital Appreciation",

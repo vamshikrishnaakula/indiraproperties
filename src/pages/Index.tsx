@@ -4,11 +4,14 @@ import {
   ArrowRight, Shield, Users, Award, Building, Search, MapPin, Home,
   Handshake, FileCheck, Eye, TrendingUp, ChevronRight, Star, HelpCircle,
 } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
+// import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "@/assets/main-video-DFRO3I1J.mp4";
+import herowhiteBg from "@/assets/vid1-BZS_rmrF.mp4";
 import { projects } from "@/data/projects";
 import ProjectCard from "@/components/ProjectCard";
 import SectionHeading from "@/components/SectionHeading";
 import EnquiryForm from "@/components/EnquiryForm";
+import StatCounter from "@/components/StatCounter";
 import {
   Accordion,
   AccordionContent,
@@ -17,9 +20,9 @@ import {
 } from "@/components/ui/accordion";
 
 const stats = [
-  { icon: Award, value: "15+", label: "Years Experience" },
-  { icon: Users, value: "2,500+", label: "Happy Customers" },
+  { icon: Users, value: "1500+", label: "Happy Customers" },
   { icon: Building, value: "25+", label: "Projects Delivered" },
+  { icon: Award, value: "15+", label: "Years Experience" },
   { icon: Shield, value: "100%", label: "Clear Titles" },
 ];
 
@@ -28,7 +31,7 @@ const services = [
   { icon: Eye, title: "Site Visit Assistance", desc: "We arrange guided site visits so you can explore projects and evaluate options before making decisions." },
   { icon: FileCheck, title: "Legal & Title Verification", desc: "Complete information about DTCP approvals, title clearance, land documentation, and legal compliance." },
   { icon: Handshake, title: "End-to-End Buying Support", desc: "From plot selection to registration, our team ensures a smooth and hassle-free buying experience." },
-  { icon: TrendingUp, title: "Investment Advisory", desc: "We help investors identify high-growth corridors and future hotspots in Telangana for maximum ROI." },
+  { icon: TrendingUp, title: "Investment Advisory", desc: "We help investors identify high-growth corridors and future hotspots in Andra Pradesh for maximum ROI." },
   { icon: Home, title: "Post-Sale Support", desc: "Continued assistance with construction guidance, resale support, and property management after purchase." },
 ];
 
@@ -43,12 +46,12 @@ const whyChoose = [
 ];
 
 const investmentZones = [
-  { name: "Shadnagar", growth: "Very High", roi: "15-20%" },
+  { name: "Vizag", growth: "Very High", roi: "15-20%" },
   { name: "Kandukur", growth: "High", roi: "12-16%" },
-  { name: "Yadagirigutta", growth: "High", roi: "12-15%" },
+  { name: "Amaravathi", growth: "High", roi: "12-15%" },
   { name: "Srisailam Highway", growth: "Emerging", roi: "10-15%" },
   { name: "Hyderabad Highway", growth: "Very High", roi: "14-18%" },
-  { name: "Bhongir", growth: "Moderate", roi: "8-12%" },
+  { name: "Guntur", growth: "Moderate", roi: "8-12%" },
 ];
 
 const processSteps = [
@@ -62,17 +65,17 @@ const processSteps = [
 
 const testimonials = [
   {
-    text: "Indra Properties helped us find the perfect plot near Shadnagar. Their guidance made the process very easy and stress-free. Highly recommended!",
-    name: "Rajesh Kumar",
-    location: "Shadnagar",
+    text: "Indra Properties helped us find the perfect plot near Vizag. Their guidance made the process very easy and stress-free. Highly recommended!",
+    name: "Koti kumar",
+    location: "Nellore",
   },
   {
     text: "Very transparent dealings and excellent infrastructure in their projects. We invested in Indra Golden City and are very happy with the appreciation.",
     name: "Priya Sharma",
-    location: "Hyderabad",
+    location: "Thirupathi",
   },
   {
-    text: "The team was professional and supportive throughout. Clear titles, proper documentation — everything was smooth. Best real estate company in Telangana!",
+    text: "The team was professional and supportive throughout. Clear titles, proper documentation — everything was smooth. Best real estate company in Andra Pradesh!",
     name: "Venkata Rao",
     location: "Kandukur",
   },
@@ -82,7 +85,7 @@ const faqs = [
   { q: "Are all your projects DTCP approved?", a: "Yes, all our projects are 100% DTCP approved with clear title documentation. We ensure complete legal compliance for every project." },
   { q: "What is the minimum investment required?", a: "Our plots start from ₹9,999/sq.yd onwards depending on the project location. We have options to suit various budgets." },
   { q: "Do you arrange site visits?", a: "Absolutely! We provide free guided site visits with pickup and drop facility from Hyderabad for all our projects." },
-  { q: "What areas do your projects cover?", a: "We have projects across key growth corridors in Telangana including Shadnagar, Kandukur, Yadagirigutta, and Hyderabad Highway." },
+  { q: "What areas do your projects cover?", a: "We have projects across key growth corridors in Andra Pradesh including Vizag, Kandukur, Amaravathi, and Hyderabad Highway." },
   { q: "Do you help with bank loans?", a: "Yes, we have tie-ups with major banks and can assist with home/plot loan approvals for eligible customers." },
   { q: "What is the booking process?", a: "You can book a plot with a token advance. Our team handles all documentation, legal verification, and registration process end-to-end." },
 ];
@@ -92,14 +95,17 @@ const Index = () => {
     <div className="min-h-screen">
       {/* Hero */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <img
+        <video
           src={heroBg}
           alt="Indra Properties premium open plots"
           className="absolute inset-0 w-full h-full object-cover"
           width={1920}
           height={1080}
+          autoPlay
+          loop
+          muted
         />
-        <div className="absolute inset-0 bg-background/75" />
+        <div className="absolute inset-0 bg-background/55" />
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -172,7 +178,7 @@ const Index = () => {
               >
                 Trusted Real Estate
                 <br />
-                <span className="text-gold-gradient">Developers in Telangana</span>
+                <span className="text-gold-gradient">Developers in Andra Pradesh</span>
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0 }}
@@ -182,7 +188,7 @@ const Index = () => {
                 className="text-muted-foreground font-body leading-relaxed mb-4"
               >
                 With over 15 years of trust and excellence, Indra Properties is one of the leading
-                real estate developers specializing in premium open plots across Telangana's
+                real estate developers specializing in premium open plots across Andra Pradesh's
                 fastest-growing corridors.
               </motion.p>
               <motion.p
@@ -197,23 +203,13 @@ const Index = () => {
               </motion.p>
             </div>
             <div className="grid grid-cols-2 gap-5">
-              {stats.map((stat, i) => (
-                <motion.div
+              {stats.map((stat) => (
+                <StatCounter
                   key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1, duration: 0.5 }}
-                  className="glass-card rounded-lg p-6 text-center"
-                >
-                  <stat.icon className="w-8 h-8 text-primary mx-auto mb-3" />
-                  <p className="text-3xl font-display font-bold text-foreground">
-                    {stat.value}
-                  </p>
-                  <p className="text-muted-foreground text-sm font-body mt-1">
-                    {stat.label}
-                  </p>
-                </motion.div>
+                  value={stat.value}
+                  label={stat.label}
+                  icon={stat.icon}
+                />
               ))}
             </div>
           </div>
@@ -257,7 +253,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <SectionHeading
             title="Featured Projects"
-            subtitle="Discover the Best Open Plot Projects in Telangana"
+            subtitle="Discover the Best Open Plot Projects in Andra Pradesh"
           />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, i) => (
@@ -305,7 +301,7 @@ const Index = () => {
       <section className="py-20 bg-navy-gradient">
         <div className="container mx-auto px-4">
           <SectionHeading
-            title="Telangana's Hottest Investment Zones"
+            title="Andra Pradesh's Hottest Investment Zones"
             subtitle="Invest in high-growth corridors with excellent appreciation potential."
           />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -341,8 +337,19 @@ const Index = () => {
       </section>
 
       {/* How We Work */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      <section className="relative py-20 overflow-hidden">
+        <video
+          src={herowhiteBg}
+          alt="Indra Properties premium"
+          className="absolute inset-0 w-full h-full object-cover"
+          width={1920}
+          height={1080}
+          autoPlay
+          loop
+          muted
+          playsInline
+        />
+        <div className="relative container mx-auto px-4">
           <SectionHeading
             title="How We Work"
             subtitle="Simple & Transparent Process"
@@ -357,9 +364,6 @@ const Index = () => {
                 transition={{ delay: i * 0.08 }}
                 className="glass-card rounded-lg p-6 relative overflow-hidden"
               >
-                <span className="absolute top-3 right-4 text-4xl font-display font-bold text-primary/10">
-                  {step.num}
-                </span>
                 <div className="w-10 h-10 rounded-full bg-gold-gradient flex items-center justify-center text-primary-foreground font-body font-bold text-sm mb-4">
                   {step.num}
                 </div>
@@ -456,18 +460,18 @@ const Index = () => {
                 <span className="text-gold-gradient">Your Future?</span>
               </h2>
               <p className="text-muted-foreground font-body mb-8 leading-relaxed">
-                Don't miss out on Telangana's fastest appreciating land. Book a
+                Don't miss out on Andra Pradesh's fastest appreciating land. Book a
                 free site visit today and take the first step toward your dream
                 property.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center gap-3 text-foreground font-body text-sm">
                   <MapPin className="w-4 h-4 text-primary shrink-0" />
-                  Hyderabad, Telangana
+                  Gudur, Andhra Pradesh
                 </div>
-                <a href="tel:+919876543210" className="flex items-center gap-3 text-foreground font-body text-sm hover:text-primary transition-colors">
+                <a href="tel:+919885353637" className="flex items-center gap-3 text-foreground font-body text-sm hover:text-primary transition-colors">
                   <ChevronRight className="w-4 h-4 text-primary shrink-0" />
-                  +91 98765 43210
+                  +91 9885353637
                 </a>
                 <a href="mailto:info@indraproperties.com" className="flex items-center gap-3 text-foreground font-body text-sm hover:text-primary transition-colors">
                   <ChevronRight className="w-4 h-4 text-primary shrink-0" />
@@ -476,13 +480,13 @@ const Index = () => {
               </div>
               <div className="flex flex-col sm:flex-row gap-4 mt-8">
                 <a
-                  href="tel:+919876543210"
+                  href="tel:+919885353637"
                   className="bg-gold-gradient text-primary-foreground px-6 py-3 rounded-md font-body font-semibold text-sm text-center"
                 >
                   📞 Call Now
                 </a>
                 <a
-                  href="https://wa.me/919876543210"
+                  href="https://wa.me/919885353637"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="border border-gold text-primary px-6 py-3 rounded-md font-body font-semibold text-sm text-center hover:bg-primary hover:text-primary-foreground transition-all"

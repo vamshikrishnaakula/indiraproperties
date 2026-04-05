@@ -4,9 +4,9 @@ import SectionHeading from "@/components/SectionHeading";
 import EnquiryForm from "@/components/EnquiryForm";
 
 const contactInfo = [
-  { icon: Phone, label: "Phone", value: "+91 98765 43210", href: "tel:+919876543210" },
+  { icon: Phone, label: "Phone", value: "+91 9885353637", href: "tel:+919885353637" },
   { icon: Mail, label: "Email", value: "info@indraproperties.com", href: "mailto:info@indraproperties.com" },
-  { icon: MapPin, label: "Office", value: "123, Jubilee Hills, Hyderabad, Telangana - 500033" },
+  { icon: MapPin, label: "Office", value: "4VH8+XPQ, Service Rd, Chillakur, Gudur, Andhra Pradesh 524412, India" },
   { icon: Clock, label: "Timings", value: "Mon - Sat, 9:00 AM - 7:00 PM" },
 ];
 
@@ -69,13 +69,13 @@ const Contact = () => {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href="tel:+919876543210"
+                  href="tel:+91 9885353637"
                   className="bg-gold-gradient text-primary-foreground px-6 py-3 rounded-md font-body font-semibold text-sm text-center flex-1"
                 >
                   📞 Call Now
                 </a>
                 <a
-                  href="https://wa.me/919876543210"
+                  href="https://wa.me/919885353637"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="border border-gold text-primary px-6 py-3 rounded-md font-body font-semibold text-sm text-center flex-1 hover:bg-primary hover:text-primary-foreground transition-all"
@@ -94,7 +94,7 @@ const Contact = () => {
       <section className="py-10">
         <div className="container mx-auto px-4">
           <div className="rounded-lg overflow-hidden border border-border aspect-[16/7]">
-            <iframe
+            {/* <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243647.3160753!2d78.24323!3d17.2473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcba12a3d70ffff%3A0x1!2sHyderabad!5e0!3m2!1sen!2sin!4v1"
               className="w-full h-full"
               style={{ border: 0 }}
@@ -102,7 +102,13 @@ const Contact = () => {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               title="Indra Properties office location"
-            />
+            /> */}
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3869.1072148006756!2d79.8678917!3d14.129791899999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4ce30015c1ec49%3A0x5eb9eabdabb3f653!2sIndra%20properties!5e0!3m2!1sen!2sus!4v1775368118659!5m2!1sen!2sus"  className="w-full h-full"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Indra Properties office location"></iframe>
           </div>
         </div>
       </section>

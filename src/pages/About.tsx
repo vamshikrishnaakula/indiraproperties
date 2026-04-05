@@ -43,7 +43,7 @@ const About = () => {
             <SectionHeading title="Our Story" />
             <p className="text-muted-foreground font-body leading-relaxed mb-6">
               Founded in 2009, Indra Properties has grown from a small family
-              venture to one of Telangana's most trusted names in open plot
+              venture to one of Andra Pradesh's most trusted names in open plot
               development. We specialize in identifying prime locations,
               developing world-class infrastructure, and delivering transparent
               land investment opportunities.
@@ -141,10 +141,10 @@ const About = () => {
               </div>
               <div className="text-center mt-4">
                 <p className="font-display text-lg font-semibold text-foreground">
-                  Mr. Indra Kumar
+                  Mr. Sai krishna Somisetty
                 </p>
                 <p className="text-primary text-sm font-body">
-                  Managing Director
+                  Managing Director of Indra Properties
                 </p>
               </div>
             </motion.div>

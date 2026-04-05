@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -14,10 +14,30 @@ const navLinks = [
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   const location = useLocation();
 
+  useEffect(() => {
+    let lastScrollY = 0;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      setIsVisible(currentScrollY > 100);
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 glass-card">
+    <motion.nav
+      initial={{ opacity: 0, y: -80 }}
+      animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : -80 }}
+      transition={{ duration: 0.3, ease: "easeOut" }}
+      className="fixed top-0 left-0 right-0 z-50 glass-card"
+      style={{ pointerEvents: isVisible ? "auto" : "none" }}
+    >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center gap-2">
@@ -39,7 +59,7 @@ const Navbar = () => {
               </Link>
             ))}
             <a
-              href="tel:+919876543210"
+              href="tel:+919885353637"
               className="flex items-center gap-2 bg-gold-gradient text-primary-foreground px-5 py-2.5 rounded-md font-body text-sm font-semibold tracking-wide transition-transform hover:scale-105"
             >
               <Phone className="w-4 h-4" />
@@ -80,7 +100,7 @@ const Navbar = () => {
                 </Link>
               ))}
               <a
-                href="tel:+919876543210"
+                href="tel:+919885353637"
                 className="flex items-center justify-center gap-2 bg-gold-gradient text-primary-foreground px-5 py-3 rounded-md font-body text-sm font-semibold"
               >
                 <Phone className="w-4 h-4" />
@@ -90,7 +110,7 @@ const Navbar = () => {
           </motion.div>
         )}
       </AnimatePresence>
-    </nav>
+    </motion.nav>
   );
 };
 

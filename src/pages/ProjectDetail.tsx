@@ -132,13 +132,13 @@ const ProjectDetail = () => {
               <div className="glass-card rounded-lg p-6 space-y-4">
                 <h3 className="font-display text-lg font-semibold text-foreground">Quick Connect</h3>
                 <a
-                  href="tel:+919876543210"
+                  href="tel:+919885353637"
                   className="flex items-center justify-center gap-2 bg-gold-gradient text-primary-foreground py-3 rounded-md font-body font-semibold text-sm w-full"
                 >
                   <Phone className="w-4 h-4" /> Call Now
                 </a>
                 <a
-                  href={`https://wa.me/919876543210?text=${encodeURIComponent(`Hi, I'm interested in ${project.name}`)}`}
+                  href={`https://wa.me/919885353637?text=${encodeURIComponent(`Hi, I'm interested in ${project.name}`)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 border border-gold text-primary py-3 rounded-md font-body font-semibold text-sm w-full hover:bg-primary hover:text-primary-foreground transition-all"

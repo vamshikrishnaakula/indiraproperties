@@ -21,7 +21,7 @@ const Projects = () => {
             transition={{ delay: 0.3 }}
             className="text-muted-foreground font-body max-w-2xl mx-auto"
           >
-            Discover premium open plot opportunities in Telangana's most promising locations.
+            Discover premium open plot opportunities in Andra Pradesh's most promising locations.
           </motion.p>
         </div>
       </section>

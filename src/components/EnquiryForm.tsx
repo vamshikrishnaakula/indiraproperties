@@ -20,12 +20,20 @@ const EnquiryForm = ({ projectName }: EnquiryFormProps) => {
     setTimeout(() => {
       toast({
         title: "Enquiry Submitted!",
-        description: "Our team will contact you shortly.",
+        description: "Opening WhatsApp to connect with our team...",
       });
 
-      const waMsg = `Hi, I'm ${form.name}. I'm interested in ${projectName || "Indra Properties"}. ${form.message}`.trim();
+      // Format message with all details
+      const waMsg = `
+*New Enquiry from ${form.name}*
+📞 Phone: ${form.phone}
+🏢 Project: ${projectName || "Indra Properties"}
+💬 Message: ${form.message || "No additional message"}
+      `.trim();
+
+      // Send via WhatsApp Web Link
       window.open(
-        `https://wa.me/919876543210?text=${encodeURIComponent(waMsg)}`,
+        `https://wa.me/19198853536373?text=${encodeURIComponent(waMsg)}`,
         "_blank"
       );
 
