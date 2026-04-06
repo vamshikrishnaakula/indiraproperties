@@ -50,7 +50,7 @@ const investmentZones = [
   { name: "Kandukur", growth: "High", roi: "12-16%" },
   { name: "Amaravathi", growth: "High", roi: "12-15%" },
   { name: "Srisailam Highway", growth: "Emerging", roi: "10-15%" },
-  { name: "Hyderabad Highway", growth: "Very High", roi: "14-18%" },
+  { name: "Chillakuru Highway", growth: "Very High", roi: "14-18%" },
   { name: "Guntur", growth: "Moderate", roi: "8-12%" },
 ];
 
@@ -84,8 +84,8 @@ const testimonials = [
 const faqs = [
   { q: "Are all your projects DTCP approved?", a: "Yes, all our projects are 100% DTCP approved with clear title documentation. We ensure complete legal compliance for every project." },
   { q: "What is the minimum investment required?", a: "Our plots start from ₹9,999/sq.yd onwards depending on the project location. We have options to suit various budgets." },
-  { q: "Do you arrange site visits?", a: "Absolutely! We provide free guided site visits with pickup and drop facility from Hyderabad for all our projects." },
-  { q: "What areas do your projects cover?", a: "We have projects across key growth corridors in Andra Pradesh including Vizag, Kandukur, Amaravathi, and Hyderabad Highway." },
+  { q: "Do you arrange site visits?", a: "Absolutely! We provide free guided site visits with pickup and drop facility from Chillakuru for all our projects." },
+  { q: "What areas do your projects cover?", a: "We have projects across key growth corridors in Andra Pradesh including Vizag, Kandukur, Amaravathi, and Chillakuru Highway." },
   { q: "Do you help with bank loans?", a: "Yes, we have tie-ups with major banks and can assist with home/plot loan approvals for eligible customers." },
   { q: "What is the booking process?", a: "You can book a plot with a token advance. Our team handles all documentation, legal verification, and registration process end-to-end." },
 ];
@@ -483,9 +483,9 @@ const Index = () => {
                   <ChevronRight className="w-4 h-4 text-primary shrink-0" />
                   +91 9885353637
                 </a>
-                <a href="mailto:info@indraproperties.com" className="flex items-center gap-3 text-foreground font-body text-sm hover:text-primary transition-colors">
+                <a href="mailto: indraproperties0005@gmail.com" className="flex items-center gap-3 text-foreground font-body text-sm hover:text-primary transition-colors">
                   <ChevronRight className="w-4 h-4 text-primary shrink-0" />
-                  info@indraproperties.com
+                   indraproperties0005@gmail.com
                 </a>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 mt-8">

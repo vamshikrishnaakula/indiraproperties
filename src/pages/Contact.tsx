@@ -5,7 +5,7 @@ import EnquiryForm from "@/components/EnquiryForm";
 
 const contactInfo = [
   { icon: Phone, label: "Phone", value: "+91 9885353637", href: "tel:+919885353637" },
-  { icon: Mail, label: "Email", value: "info@indraproperties.com", href: "mailto:info@indraproperties.com" },
+  { icon: Mail, label: "Email", value: " indraproperties0005@gmail.com", href: "mailto: indraproperties0005@gmail.com" },
   { icon: MapPin, label: "Office", value: "4VH8+XPQ, Service Rd, Chillakur, Gudur, Andhra Pradesh 524412, India" },
   { icon: Clock, label: "Timings", value: "Mon - Sat, 9:00 AM - 7:00 PM" },
 ];
@@ -95,7 +95,7 @@ const Contact = () => {
         <div className="container mx-auto px-4">
           <div className="rounded-lg overflow-hidden border border-border aspect-[16/7]">
             {/* <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243647.3160753!2d78.24323!3d17.2473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcba12a3d70ffff%3A0x1!2sHyderabad!5e0!3m2!1sen!2sin!4v1"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243647.3160753!2d78.24323!3d17.2473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcba12a3d70ffff%3A0x1!2sChillakuru!5e0!3m2!1sen!2sin!4v1"
               className="w-full h-full"
               style={{ border: 0 }}
               allowFullScreen

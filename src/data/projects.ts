@@ -21,11 +21,11 @@ export const projects: Project[] = [
   {
     id: "indra-golden-city",
     name: "Indra Golden City",
-    location: "Hyderabad Highway, Vizag",
+    location: "Chillakuru Highway, Vizag",
     price: "₹15,999/sq.yd onwards",
     image: project1,
     description:
-      "Experience premium living at Indra Golden City — a thoughtfully planned gated community with world-class infrastructure, wide 40ft & 30ft BT roads, avenue plantation, and all modern amenities. Located on the booming Hyderabad Highway corridor with excellent connectivity.",
+      "Experience premium living at Indra Golden City — a thoughtfully planned gated community with world-class infrastructure, wide 40ft & 30ft BT roads, avenue plantation, and all modern amenities. Located on the booming Chillakuru Highway corridor with excellent connectivity.",
     amenities: [
       "Gated Community with 24/7 Security",
       "40ft & 30ft BT Roads",
@@ -37,7 +37,7 @@ export const projects: Project[] = [
       "Community Hall",
     ],
     locationAdvantages: [
-      "5 mins from NH-44 Hyderabad Highway",
+      "5 mins from NH-44 Chillakuru Highway",
       "10 mins from Vizag Town",
       "Near Proposed Pharma City",
       "Close to Educational Institutions",
@@ -48,7 +48,7 @@ export const projects: Project[] = [
     totalPlots: 250,
     status: "Open for Booking",
     mapEmbed:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243647.3160753!2d78.24323!3d17.2473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcba12a3d70ffff%3A0x1!2sHyderabad!5e0!3m2!1sen!2sin!4v1",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243647.3160753!2d78.24323!3d17.2473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcba12a3d70ffff%3A0x1!2sChillakuru!5e0!3m2!1sen!2sin!4v1",
   },
   {
     id: "indra-green-valley",
@@ -80,7 +80,7 @@ export const projects: Project[] = [
     totalPlots: 180,
     status: "Phase 2 Launching Soon",
     mapEmbed:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243647.3160753!2d78.24323!3d17.2473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcba12a3d70ffff%3A0x1!2sHyderabad!5e0!3m2!1sen!2sin!4v1",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243647.3160753!2d78.24323!3d17.2473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcba12a3d70ffff%3A0x1!2sChillakuru!5e0!3m2!1sen!2sin!4v1",
   },
   {
     id: "indra-hill-view",
@@ -112,6 +112,6 @@ export const projects: Project[] = [
     totalPlots: 200,
     status: "Selling Fast",
     mapEmbed:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243647.3160753!2d78.24323!3d17.2473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcba12a3d70ffff%3A0x1!2sHyderabad!5e0!3m2!1sen!2sin!4v1",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243647.3160753!2d78.24323!3d17.2473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcba12a3d70ffff%3A0x1!2sChillakuru!5e0!3m2!1sen!2sin!4v1",
   },
 ];
