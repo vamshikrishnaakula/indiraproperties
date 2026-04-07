@@ -117,14 +117,7 @@ const Index = () => {
           loop
           muted
         />
-        <div className="absolute left-4 top-4 z-20 rounded-full bg-black/30 px-4 py-3 text-left shadow-lg shadow-black/20 backdrop-blur-sm sm:left-6 sm:top-6">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.35em] text-white/90">
-            Sai Highway Dream Houses
-          </p>
-          <p className="mt-1 text-[10px] text-white/75">
-            Best Land Investment Opportunity Near Gudur
-          </p>
-        </div>
+        {/* <div className="absolute left-4 top-4 z-20 rounded-full bg-black/30 px-4 py-3 text-left shadow-lg shadow-black/20 backdrop-blur-sm sm:left-6 sm:top-6"></div> */}
         <div className="absolute inset-0 bg-background/55" />
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.p
@@ -332,46 +325,7 @@ const Index = () => {
           </div>
         </div>
       </section>
-
-      {/* Investment Zones */}
-      <section className="py-20 bg-navy-gradient">
-        <div className="container mx-auto px-4">
-          <SectionHeading
-            title="Andra Pradesh's Hottest Investment Zones"
-            subtitle="Invest in high-growth corridors with excellent appreciation potential."
-          />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {investmentZones.map((zone, i) => (
-              <motion.div
-                key={zone.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.08 }}
-                className="glass-card rounded-lg p-5 hover:shadow-gold transition-all"
-              >
-                <div className="flex items-center gap-2 mb-3">
-                  <MapPin className="w-4 h-4 text-primary" />
-                  <h3 className="font-display text-lg font-semibold text-foreground">{zone.name}</h3>
-                </div>
-                <div className="flex justify-between text-sm font-body">
-                  <div>
-                    <p className="text-muted-foreground text-xs">Growth Potential</p>
-                    <p className={`font-semibold ${zone.growth === "Very High" ? "text-green-400" : zone.growth === "High" ? "text-primary" : "text-muted-foreground"}`}>
-                      {zone.growth}
-                    </p>
-                  </div>
-                  <div className="text-right">
-                    <p className="text-muted-foreground text-xs">Expected ROI</p>
-                    <p className="font-semibold text-primary">{zone.roi}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
+      
       {/* How We Work */}
       <section className="relative py-20 overflow-hidden">
         <video
