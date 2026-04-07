@@ -12,7 +12,7 @@ const Footer = () => {
               <img src={logo} alt="Indra Properties" className="h-16 w-auto" />
             </Link>
             <p className="text-muted-foreground/70 font-body text-sm leading-relaxed max-w-md">
-              Your trusted real estate advisory partner in Hyderabad. We help you make confident property decisions with clarity and care.
+              Your trusted real estate advisory partner in Chillakuru. We help you make confident property decisions with clarity and care.
             </p>
           </div>
 
@@ -59,11 +59,11 @@ const Footer = () => {
                 +91 9885353637
               </a>
               <a
-                href="mailto:info@indraproperties.com"
+                href="mailto: indraproperties0005@gmail.com"
                 className="flex items-center gap-3 text-muted-foreground/70 hover:text-primary transition-colors"
               >
                 <Mail className="w-5 h-5 text-primary" />
-                info@indraproperties.com
+                 indraproperties0005@gmail.com
               </a>
               <div className="flex items-start gap-3 text-muted-foreground/70">
                 <MapPin className="w-5 h-5 text-primary mt-1" />

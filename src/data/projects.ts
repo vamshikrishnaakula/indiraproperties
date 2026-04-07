@@ -1,117 +1,106 @@
-import project1 from "@/assets/project-1.jpg";
-import project2 from "@/assets/project-2.jpg";
-import project3 from "@/assets/project-3.jpg";
+import project1 from "@/assets/main_features/main_kaman.png";
+import project2 from "@/assets/main_features/plans.jpg";
+import project3 from "@/assets/main_features/11.png";
+import project4 from "@/assets/main_features/10.png";
 
 export interface Project {
   id: string;
   name: string;
   location: string;
-  price: string;
   image: string;
   description: string;
   amenities: string[];
   locationAdvantages: string[];
-  plotSizes: string;
-  totalPlots: number;
   status: string;
+  status_1?: string;
+  status_2?: string;  
   mapEmbed: string;
 }
 
 export const projects: Project[] = [
   {
-    id: "indra-golden-city",
-    name: "Indra Golden City",
-    location: "Hyderabad Highway, Vizag",
-    price: "₹15,999/sq.yd onwards",
+    id: "Sai-Highway-Dream-Houses",
+    name: "Sai Highway Dream Houses venture",
+    location: " Nellore District, Gudur",
     image: project1,
     description:
-      "Experience premium living at Indra Golden City — a thoughtfully planned gated community with world-class infrastructure, wide 40ft & 30ft BT roads, avenue plantation, and all modern amenities. Located on the booming Hyderabad Highway corridor with excellent connectivity.",
+      "Experience premium living at Indra Golden City — a thoughtfully planned gated community with world-class infrastructure, wide 40ft & 30ft BT roads, avenue plantation, and all modern amenities. Located on the booming Chillakuru Highway corridor with excellent connectivity.",
     amenities: [
-      "Gated Community with 24/7 Security",
-      "40ft & 30ft BT Roads",
-      "Underground Drainage",
-      "Overhead Water Tank",
+      "Prime Location",
+      "Excellent Connectivity",
+      "Fast Developing Zone",
+      "High Return Potential",
+      "Peaceful Environment",
       "Children's Play Area",
       "Avenue Plantation",
       "Street Lights",
       "Community Hall",
     ],
     locationAdvantages: [
-      "5 mins from NH-44 Hyderabad Highway",
-      "10 mins from Vizag Town",
-      "Near Proposed Pharma City",
-      "Close to Educational Institutions",
-      "Upcoming Metro Connectivity",
-      "Near IT Corridor",
+      "Nellore District, Gudur",
+      "Behind Chillakuru Police Station",
+      "Free Site Visit Available",
     ],
-    plotSizes: "150 - 500 sq.yds",
-    totalPlots: 250,
     status: "Open for Booking",
     mapEmbed:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243647.3160753!2d78.24323!3d17.2473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcba12a3d70ffff%3A0x1!2sHyderabad!5e0!3m2!1sen!2sin!4v1",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3869.1072148006756!2d79.8678917!3d14.129791899999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4ce30015c1ec49%3A0x5eb9eabdabb3f653!2sIndra%20properties!5e0!3m2!1sen!2sus!4v1775364422417!5m2!1sen!2sus",
   },
   {
-    id: "indra-green-valley",
-    name: "Indra Green Valley",
-    location: "Srisailam Highway, Kandukur",
-    price: "₹9,999/sq.yd onwards",
+    id: "Sai-Highway-Dream-Houses-Phase-2",
+    name: "Sai-Highway-Dream-Houses-Phase-2",
+    location: " Nellore District, Gudur",
     image: project2,
     description:
       "Nestled amidst lush greenery, Indra Green Valley offers a serene retreat with modern infrastructure. DTCP approved plots with clear titles, perfect for building your dream home in a peaceful environment close to nature.",
     amenities: [
-      "DTCP Approved Layout",
-      "30ft BT Roads",
-      "Compound Wall",
+      "Prime Location",
+      "Excellent Connectivity",
+      "Fast Developing Zone",
       "Bore Well Water Supply",
       "Children's Park",
+      "Peaceful Environment",
       "Temple",
       "Street Lights",
       "Drainage System",
+      "High Return Potential",
     ],
     locationAdvantages: [
-      "On Srisailam Highway",
-      "15 mins from Kandukur Town",
-      "Near Industrial Growth Corridor",
-      "Close to Schools & Hospitals",
-      "Proposed Ring Road Nearby",
-      "Affordable Investment Zone",
+      "Nellore District, Gudur",
+      "Behind Chillakuru Police Station",
+      "Free Site Visit Available",
     ],
-    plotSizes: "120 - 400 sq.yds",
-    totalPlots: 180,
-    status: "Phase 2 Launching Soon",
+    status: "Phase 3 Ongoing",
+    status_1: "Phase 1 Completed",
+    status_2: "Phase 2 Completed",
     mapEmbed:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243647.3160753!2d78.24323!3d17.2473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcba12a3d70ffff%3A0x1!2sHyderabad!5e0!3m2!1sen!2sin!4v1",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3869.1072148006756!2d79.8678917!3d14.129791899999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4ce30015c1ec49%3A0x5eb9eabdabb3f653!2sIndra%20properties!5e0!3m2!1sen!2sus!4v1775364422417!5m2!1sen!2sus",
   },
   {
-    id: "indra-hill-view",
-    name: "Indra Hill View",
-    location: "Amaravathi, Yadadri",
-    price: "₹12,499/sq.yd onwards",
+    id: "Sai-Highway-Dream-Houses-Phase-3-Indra-Hill-View",
+    name: "Sai Highway Dream Houses Phase 3 - Indra Hill View",
+    location: " Nellore District, Gudur",
     image: project3,
     description:
       "Perched at a scenic hilltop location near the holy Amaravathi temple, Indra Hill View offers breathtaking panoramic views and a unique lifestyle opportunity. Fully developed plots with premium infrastructure in a rapidly appreciating zone.",
     amenities: [
-      "Panoramic Hill Views",
-      "Gated & Secured Layout",
-      "40ft Main Road",
-      "Underground Electricity",
-      "Rainwater Harvesting",
-      "Jogging Track",
-      "Community Garden",
-      "24/7 Water Supply",
+      "Prime Location",
+      "Excellent Connectivity",
+      "Fast Developing Zone",
+      "Bore Well Water Supply",
+      "Children's Park",
+      "Peaceful Environment",
+      "Temple",
+      "Street Lights",
+      "Drainage System",
+      "High Return Potential",
     ],
     locationAdvantages: [
-      "3 km from Amaravathi Temple",
-      "Near Regional Ring Road",
-      "20 mins from Guntur",
-      "Close to Upcoming Airport City",
-      "Near NIMZ Industrial Zone",
-      "Excellent Capital Appreciation",
+      "Nellore District, Gudur",
+      "Behind Chillakuru Police Station",
+      "Free Site Visit Available",
     ],
-    plotSizes: "167 - 500 sq.yds",
-    totalPlots: 200,
     status: "Selling Fast",
     mapEmbed:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243647.3160753!2d78.24323!3d17.2473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcba12a3d70ffff%3A0x1!2sHyderabad!5e0!3m2!1sen!2sin!4v1",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3869.1072148006756!2d79.8678917!3d14.129791899999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4ce30015c1ec49%3A0x5eb9eabdabb3f653!2sIndra%20properties!5e0!3m2!1sen!2sus!4v1775364422417!5m2!1sen!2sus",
   },
 ];

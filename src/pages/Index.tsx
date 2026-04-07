@@ -7,7 +7,9 @@ import {
 // import heroBg from "@/assets/hero-bg.jpg";
 import heroBg from "@/assets/main-video-DFRO3I1J.mp4";
 import herowhiteBg from "@/assets/vid1-BZS_rmrF.mp4";
+import brochurePdf from "@/assets/Sai Highway Dream Houses _ Brochure Final V (1).pdf";
 import { projects } from "@/data/projects";
+// import { projects  } from "@/data/mainprojects";
 import ProjectCard from "@/components/ProjectCard";
 import SectionHeading from "@/components/SectionHeading";
 import EnquiryForm from "@/components/EnquiryForm";
@@ -50,7 +52,7 @@ const investmentZones = [
   { name: "Kandukur", growth: "High", roi: "12-16%" },
   { name: "Amaravathi", growth: "High", roi: "12-15%" },
   { name: "Srisailam Highway", growth: "Emerging", roi: "10-15%" },
-  { name: "Hyderabad Highway", growth: "Very High", roi: "14-18%" },
+  { name: "Chillakuru Highway", growth: "Very High", roi: "14-18%" },
   { name: "Guntur", growth: "Moderate", roi: "8-12%" },
 ];
 
@@ -84,8 +86,8 @@ const testimonials = [
 const faqs = [
   { q: "Are all your projects DTCP approved?", a: "Yes, all our projects are 100% DTCP approved with clear title documentation. We ensure complete legal compliance for every project." },
   { q: "What is the minimum investment required?", a: "Our plots start from ₹9,999/sq.yd onwards depending on the project location. We have options to suit various budgets." },
-  { q: "Do you arrange site visits?", a: "Absolutely! We provide free guided site visits with pickup and drop facility from Hyderabad for all our projects." },
-  { q: "What areas do your projects cover?", a: "We have projects across key growth corridors in Andra Pradesh including Vizag, Kandukur, Amaravathi, and Hyderabad Highway." },
+  { q: "Do you arrange site visits?", a: "Absolutely! We provide free guided site visits with pickup and drop facility from Chillakuru for all our projects." },
+  { q: "What areas do your projects cover?", a: "We have projects across key growth corridors in Andra Pradesh including Vizag, Kandukur, Amaravathi, and Chillakuru Highway." },
   { q: "Do you help with bank loans?", a: "Yes, we have tie-ups with major banks and can assist with home/plot loan approvals for eligible customers." },
   { q: "What is the booking process?", a: "You can book a plot with a token advance. Our team handles all documentation, legal verification, and registration process end-to-end." },
 ];
@@ -106,7 +108,7 @@ const Index = () => {
           muted
         /> */}
         <video
-          src="https://res.cloudinary.com/dakwcewks/video/upload/main-video-DFRO3I1J_e072hl.mp4"
+          src="https://res.cloudinary.com/dakwcewks/video/upload/Website_Banner_Video_wli0m7.mp4"
           alt="Indra Properties premium open plots"
           className="absolute inset-0 w-full h-full object-cover"
           width={1920}
@@ -115,6 +117,14 @@ const Index = () => {
           loop
           muted
         />
+        <div className="absolute left-4 top-4 z-20 rounded-full bg-black/30 px-4 py-3 text-left shadow-lg shadow-black/20 backdrop-blur-sm sm:left-6 sm:top-6">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.35em] text-white/90">
+            Sai Highway Dream Houses
+          </p>
+          <p className="mt-1 text-[10px] text-white/75">
+            Best Land Investment Opportunity Near Gudur
+          </p>
+        </div>
         <div className="absolute inset-0 bg-background/55" />
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.p
@@ -150,18 +160,33 @@ const Index = () => {
             transition={{ delay: 0.7 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <Link
-              to="/projects"
+            <a
+              href={brochurePdf}
+              download
               className="bg-gold-gradient text-primary-foreground px-8 py-3.5 rounded-md font-body font-semibold text-sm tracking-wide flex items-center justify-center gap-2 hover:opacity-90 transition-opacity"
             >
-              Explore Projects
-              <ArrowRight className="w-4 h-4" />
-            </Link>
+              Download Brochure
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="30"
+                height="30"
+                fill="none"
+                stroke="#000000"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                style={{ opacity: 1 }}
+              >
+                <path d="M6 5h12a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V9a4 4 0 0 1 4-4" />
+                <path d="m14.5 10.75l-2.5 2.5l-2.5-2.5" />
+              </svg>
+            </a>
             <Link
               to="/contact"
               className="border border-gold text-primary px-8 py-3.5 rounded-md font-body font-semibold text-sm tracking-wide hover:bg-primary hover:text-primary-foreground transition-all"
             >
-              Book Free Consultation
+              Book Free Site Visit
             </Link>
           </motion.div>
         </div>
@@ -257,12 +282,12 @@ const Index = () => {
           </div>
         </div>
       </section>
-
+      {/* //main_project */}
       {/* Featured Projects */}
       <section className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
           <SectionHeading
-            title="Featured Projects"
+            title=" Main Projects"
             subtitle="Discover the Best Open Plot Projects in Andra Pradesh"
           />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -281,6 +306,7 @@ const Index = () => {
           </div>
         </div>
       </section>
+      {/* ... */}
 
       {/* Why Choose Us */}
       <section className="py-20">
@@ -483,9 +509,9 @@ const Index = () => {
                   <ChevronRight className="w-4 h-4 text-primary shrink-0" />
                   +91 9885353637
                 </a>
-                <a href="mailto:info@indraproperties.com" className="flex items-center gap-3 text-foreground font-body text-sm hover:text-primary transition-colors">
+                <a href="mailto: indraproperties0005@gmail.com" className="flex items-center gap-3 text-foreground font-body text-sm hover:text-primary transition-colors">
                   <ChevronRight className="w-4 h-4 text-primary shrink-0" />
-                  info@indraproperties.com
+                   indraproperties0005@gmail.com
                 </a>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 mt-8">
