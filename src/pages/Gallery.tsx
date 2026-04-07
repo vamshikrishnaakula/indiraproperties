@@ -3,20 +3,38 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 
-import gallery1 from "@/assets/gallery-1.jpg";
-import gallery2 from "@/assets/gallery-2.jpg";
-import gallery3 from "@/assets/gallery-3.jpg";
-import project1 from "@/assets/project-1.jpg";
-import project2 from "@/assets/project-2.jpg";
-import project3 from "@/assets/project-3.jpg";
+import gallery1 from "@/assets/main_features/main_kaman.png";
+import gallery2 from "@/assets/main_features/plans.jpg";
+import gallery3 from "@/assets/main_features/9.JPG";
+import gallery4 from "@/assets/main_features/10.png";
+import gallery5 from "@/assets/main_features/11.png";
+import gallery6 from "@/assets/main_features/box_cricket.JPG";
+import gallery7 from "@/assets/main_features/box_cricket_2.JPG";
+import gallery8 from "@/assets/main_features/18.png";
+import gallery9 from "@/assets/main_features/1.JPG";
+import gallery10 from "@/assets/main_features/2.JPG";
+import gallery11 from "@/assets/main_features/15.png";
+import gallery12 from "@/assets/main_features/16.png";
+import gallery13 from "@/assets/main_features/17.png";
+import gallery14 from "@/assets/main_features/14.png";
+import gallery15 from "@/assets/main_features/8.JPG";
 
 const images = [
-  { src: project1, alt: "Indra Golden City aerial view" },
-  { src: gallery1, alt: "Site development in progress" },
-  { src: project2, alt: "Indra Green Valley entrance" },
-  { src: gallery2, alt: "Completed infrastructure" },
-  { src: project3, alt: "Indra Hill View panoramic" },
-  { src: gallery3, alt: "Premium villa plots aerial" },
+  { src: gallery1, alt: "Indra Golden City aerial view" },
+  { src: gallery2, alt: "Site development in progress" },
+  { src: gallery3, alt: "Indra Green Valley entrance" },
+  { src: gallery4, alt: "Completed infrastructure" },
+  { src: gallery5, alt: "Indra Hill View panoramic" },
+  { src: gallery6, alt: "Premium villa plots aerial" },
+  { src: gallery7, alt: "Indra Golden City aerial view" },
+  { src: gallery8, alt: "Site development in progress" },
+  { src: gallery9, alt: "Indra Green Valley entrance" },
+  { src: gallery10, alt: "Completed infrastructure" },
+  { src: gallery11, alt: "Indra Hill View panoramic" },
+  { src: gallery12, alt: "Premium villa plots aerial" },
+  { src: gallery13, alt: "Indra Golden City aerial view" },
+  { src: gallery14, alt: "Site development updates" },
+  { src: gallery15, alt: "Hill View residential" },
 ];
 
 const Gallery = () => {

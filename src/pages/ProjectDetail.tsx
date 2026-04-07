@@ -24,33 +24,33 @@ const ProjectDetail = () => {
   return (
     <div className="min-h-screen pt-20">
       {/* Hero */}
-      <section className="relative h-[50vh] md:h-[60vh]">
+      <section className="relative w-screen -ml-[calc((100vw-100%)/2)] h-[60vh] md:h-screen">
         <img
           src={project.image}
           alt={project.name}
-          className="absolute inset-0 w-full h-full object-cover"
-          width={800}
-          height={600}
+          className="w-full h-full object-contain"
         />
-        <div className="absolute inset-0 bg-background/70" />
-        <div className="relative z-10 h-full flex flex-col justify-end container mx-auto px-4 pb-10">
-          <Link
-            to="/projects"
-            className="flex items-center gap-2 text-primary font-body text-sm mb-6 hover:underline"
-          >
-            <ArrowLeft className="w-4 h-4" /> Back to Projects
-          </Link>
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-            <div className="inline-block bg-gold-gradient text-primary-foreground text-xs font-body font-bold px-3 py-1 rounded-full mb-3">
-              {project.status}
-            </div>
-            <h1 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-2">
-              {project.name}
-            </h1>
-            <div className="flex items-center gap-2 text-muted-foreground font-body">
-              <MapPin className="w-4 h-4" /> {project.location}
-            </div>
-          </motion.div>
+        <div className="absolute inset-0 bg-background/20" />
+        <div className="absolute inset-0 z-10 flex flex-col justify-end">
+          <div className="container mx-auto px-4 pb-2">
+            <Link
+              to="/projects"
+              className="flex items-center gap-2 text-primary font-body text-sm mb-6 hover:underline"
+            >
+              <ArrowLeft className="w-4 h-4" /> Back to Projects
+            </Link>
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+              <div className="inline-block bg-gold-gradient text-primary-foreground text-xs font-body font-bold px-3 py-1 rounded-full mb-3">
+                {project.status}
+              </div>
+              <h1 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-2">
+                {project.name}
+              </h1>
+              <div className="flex items-center gap-2 text-muted-foreground font-body">
+                <MapPin className="w-4 h-4" /> {project.location}
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -63,6 +63,12 @@ const ProjectDetail = () => {
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
                 <h2 className="text-2xl font-display font-bold text-foreground mb-4">Overview</h2>
                 <p className="text-muted-foreground font-body leading-relaxed">{project.description}</p>
+                {project.status_1 && (
+                  <p className="bg-gold-gradient text-primary-foreground text-xs font-body font-bold px-3 py-1  mb-3">Status: {project.status_1}</p>
+                )}
+                {project.status_2 && (
+                  <p className="bg-gold-gradient text-primary-foreground text-xs font-body font-bold px-3 py-1  mb-3">Status: {project.status_2}</p>
+                )}
                 <div className="grid grid-cols-3 gap-4 mt-6">
                   <div className="glass-card rounded-lg p-4 text-center">
                     <Grid3X3 className="w-5 h-5 text-primary mx-auto mb-2" />

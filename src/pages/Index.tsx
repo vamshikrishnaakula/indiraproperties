@@ -7,7 +7,9 @@ import {
 // import heroBg from "@/assets/hero-bg.jpg";
 import heroBg from "@/assets/main-video-DFRO3I1J.mp4";
 import herowhiteBg from "@/assets/vid1-BZS_rmrF.mp4";
+import brochurePdf from "@/assets/Sai Highway Dream Houses _ Brochure Final V (1).pdf";
 import { projects } from "@/data/projects";
+// import { projects  } from "@/data/mainprojects";
 import ProjectCard from "@/components/ProjectCard";
 import SectionHeading from "@/components/SectionHeading";
 import EnquiryForm from "@/components/EnquiryForm";
@@ -106,7 +108,7 @@ const Index = () => {
           muted
         /> */}
         <video
-          src="https://res.cloudinary.com/dakwcewks/video/upload/main-video-DFRO3I1J_e072hl.mp4"
+          src="https://res.cloudinary.com/dakwcewks/video/upload/Website_Banner_Video_wli0m7.mp4"
           alt="Indra Properties premium open plots"
           className="absolute inset-0 w-full h-full object-cover"
           width={1920}
@@ -115,6 +117,14 @@ const Index = () => {
           loop
           muted
         />
+        <div className="absolute left-4 top-4 z-20 rounded-full bg-black/30 px-4 py-3 text-left shadow-lg shadow-black/20 backdrop-blur-sm sm:left-6 sm:top-6">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.35em] text-white/90">
+            Sai Highway Dream Houses
+          </p>
+          <p className="mt-1 text-[10px] text-white/75">
+            Best Land Investment Opportunity Near Gudur
+          </p>
+        </div>
         <div className="absolute inset-0 bg-background/55" />
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.p
@@ -150,18 +160,33 @@ const Index = () => {
             transition={{ delay: 0.7 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <Link
-              to="/projects"
+            <a
+              href={brochurePdf}
+              download
               className="bg-gold-gradient text-primary-foreground px-8 py-3.5 rounded-md font-body font-semibold text-sm tracking-wide flex items-center justify-center gap-2 hover:opacity-90 transition-opacity"
             >
-              Explore Projects
-              <ArrowRight className="w-4 h-4" />
-            </Link>
+              Download Brochure
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="30"
+                height="30"
+                fill="none"
+                stroke="#000000"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                style={{ opacity: 1 }}
+              >
+                <path d="M6 5h12a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V9a4 4 0 0 1 4-4" />
+                <path d="m14.5 10.75l-2.5 2.5l-2.5-2.5" />
+              </svg>
+            </a>
             <Link
               to="/contact"
               className="border border-gold text-primary px-8 py-3.5 rounded-md font-body font-semibold text-sm tracking-wide hover:bg-primary hover:text-primary-foreground transition-all"
             >
-              Book Free Consultation
+              Book Free Site Visit
             </Link>
           </motion.div>
         </div>
@@ -257,12 +282,12 @@ const Index = () => {
           </div>
         </div>
       </section>
-
+      {/* //main_project */}
       {/* Featured Projects */}
       <section className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
           <SectionHeading
-            title="Featured Projects"
+            title=" Main Projects"
             subtitle="Discover the Best Open Plot Projects in Andra Pradesh"
           />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -281,6 +306,7 @@ const Index = () => {
           </div>
         </div>
       </section>
+      {/* ... */}
 
       {/* Why Choose Us */}
       <section className="py-20">
