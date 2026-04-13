@@ -20,7 +20,7 @@ const SplashScreen = ({ onComplete }: { onComplete: () => void }) => {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.6 }}
-          className="fixed inset-0 z-[100] bg-background flex flex-col items-center justify-center"
+          className="fixed inset-0 z-[100] bg-black flex flex-col items-center justify-center"
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}

@@ -5,7 +5,7 @@ import EnquiryForm from "@/components/EnquiryForm";
 
 const contactInfo = [
   { icon: Phone, label: "Phone", value: "+91 9885353637", href: "tel:+919885353637" },
-  { icon: Mail, label: "Email", value: " indraproperties0005@gmail.com", href: "mailto: indraproperties0005@gmail.com" },
+  { icon: Mail, label: "Email", value: "indraproperties0005@gmail.com", href: "mailto:indraproperties0005@gmail.com" },
   { icon: MapPin, label: "Office", value: "4VH8+XPQ, Service Rd, Chillakur, Gudur, Andhra Pradesh 524412, India" },
   { icon: Clock, label: "Timings", value: "Mon - Sat, 9:00 AM - 7:00 PM" },
 ];
@@ -46,21 +46,21 @@ const Contact = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.1 }}
-                    className="flex items-start gap-4"
+                    className="flex items-center gap-4"
                   >
                     <div className="w-12 h-12 rounded-lg bg-secondary flex items-center justify-center shrink-0">
                       <item.icon className="w-5 h-5 text-primary" />
                     </div>
                     <div>
-                      <p className="text-foreground font-body font-semibold text-sm">
+                      <p className="text-foreground font-semibold text-sm">
                         {item.label}
                       </p>
                       {item.href ? (
-                        <a href={item.href} className="text-muted-foreground font-body text-sm hover:text-primary transition-colors">
+                        <a href={item.href} className="text-muted-foreground text-sm whitespace-nowrap hover:text-primary transition-colors">
                           {item.value}
                         </a>
                       ) : (
-                        <p className="text-muted-foreground font-body text-sm">{item.value}</p>
+                        <p className="text-muted-foreground text-sm">{item.value}</p>
                       )}
                     </div>
                   </motion.div>

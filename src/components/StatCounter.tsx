@@ -61,9 +61,9 @@ const StatCounter = ({ value, label, icon: Icon }: StatCounterProps) => {
       className="glass-card rounded-lg p-6 text-center"
     >
       <Icon className="w-8 h-8 text-primary mx-auto mb-3" />
-      <p className="text-3xl font-display font-bold text-foreground">
+      <p className="text-3xl font-body font-semibold text-foreground">
         {getFormatted()}
-        <span className="text-2xl">{getSuffix()}</span>
+        <span className="text-2xl font-body font-semibold">{getSuffix()}</span>
       </p>
       <p className="text-muted-foreground text-sm font-body mt-1">{label}</p>
     </motion.div>

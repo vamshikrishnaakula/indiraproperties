@@ -15,6 +15,14 @@ const EnquiryForm = ({ projectName }: EnquiryFormProps) => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.name.trim() || !form.phone.trim()) return;
+    if (!/^\d{10}$/.test(form.phone)) {
+      toast({
+        title: "Invalid Phone Number",
+        description: "Please enter a valid 10-digit phone number.",
+        variant: "destructive",
+      });
+      return;
+    }
 
     setLoading(true);
     setTimeout(() => {
@@ -33,7 +41,7 @@ const EnquiryForm = ({ projectName }: EnquiryFormProps) => {
 
       // Send via WhatsApp Web Link
       window.open(
-        `https://wa.me/19198853536373?text=${encodeURIComponent(waMsg)}`,
+        `https://wa.me/919885353637?text=${encodeURIComponent(waMsg)}`,
         "_blank"
       );
 
@@ -69,9 +77,13 @@ const EnquiryForm = ({ projectName }: EnquiryFormProps) => {
         type="tel"
         placeholder="Phone Number *"
         required
-        maxLength={15}
+        maxLength={10}
+        inputMode="numeric"
+        pattern="[0-9]{10}"
         value={form.phone}
-        onChange={(e) => setForm({ ...form, phone: e.target.value })}
+        onChange={(e) =>
+          setForm({ ...form, phone: e.target.value.replace(/\D/g, "").slice(0, 10) })
+        }
         className="w-full bg-background border border-border rounded-md px-4 py-3 text-foreground placeholder:text-muted-foreground font-body text-sm focus:outline-none focus:border-gold transition-colors"
       />
 

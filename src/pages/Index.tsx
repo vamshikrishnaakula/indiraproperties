@@ -6,7 +6,6 @@ import {
 } from "lucide-react";
 // import heroBg from "@/assets/hero-bg.jpg";
 import heroBg from "@/assets/main-video-DFRO3I1J.mp4";
-import herowhiteBg from "@/assets/vid1-BZS_rmrF.mp4";
 import brochurePdf from "@/assets/Sai Highway Dream Houses _ Brochure Final V (1).pdf";
 import { projects } from "@/data/projects";
 // import { projects  } from "@/data/mainprojects";
@@ -108,17 +107,22 @@ const Index = () => {
           muted
         /> */}
         <video
-          src="https://res.cloudinary.com/dakwcewks/video/upload/Website_Banner_Video_wli0m7.mp4"
-          alt="Indra Properties premium open plots"
           className="absolute inset-0 w-full h-full object-cover"
           width={1920}
           height={1080}
           autoPlay
           loop
           muted
-        />
+          playsInline
+          preload="auto"
+        >
+          <source
+            src="https://res.cloudinary.com/dakwcewks/video/upload/Website_Banner_Video_wli0m7.mp4"
+            type="video/mp4"
+          />
+          Indra Properties premium open plots video background
+        </video>
         {/* <div className="absolute left-4 top-4 z-20 rounded-full bg-black/30 px-4 py-3 text-left shadow-lg shadow-black/20 backdrop-blur-sm sm:left-6 sm:top-6"></div> */}
-        <div className="absolute inset-0 bg-background/55" />
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -132,7 +136,7 @@ const Index = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-foreground leading-tight mb-6"
+            className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white leading-tight mb-6"
           >
             We Turn Your Dreams
             <br />
@@ -142,7 +146,7 @@ const Index = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
-            className="text-muted-foreground font-body max-w-xl mx-auto mb-10 text-base md:text-lg"
+            className="text-white font-body max-w-xl mx-auto mb-10 text-base md:text-lg"
           >
             Invest in DTCP-approved open plots at prime locations with
             world-class amenities and guaranteed returns.
@@ -283,7 +287,7 @@ const Index = () => {
             title=" Main Projects"
             subtitle="Discover the Best Open Plot Projects in Andra Pradesh"
           />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
             {projects.map((project, i) => (
               <ProjectCard key={project.id} project={project} index={i} />
             ))}
@@ -325,48 +329,52 @@ const Index = () => {
           </div>
         </div>
       </section>
-      
+    
       {/* How We Work */}
-      <section className="relative py-20 overflow-hidden">
-        <video
-          src="https://res.cloudinary.com/dakwcewks/video/upload/vid1-BZS_rmrF_aadta4.mp4"
-          alt="Indra Properties premium"
-          className="absolute inset-0 w-full h-full object-cover"
-          width={1920}
-          height={1080}
-          autoPlay
-          loop
-          muted
-          playsInline
-        />
-        <div className="relative container mx-auto px-4">
-          <SectionHeading
-            title="How We Work"
-            subtitle="Simple & Transparent Process"
-          />
-          <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {processSteps.map((step, i) => (
-              <motion.div
-                key={step.num}
-                initial={{ opacity: 0, y: 25 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.08 }}
-                className="glass-card rounded-lg p-6 relative overflow-hidden"
+            <section className="relative py-20 overflow-hidden">
+              <video
+                aria-label="Indra Properties premium"
+                className="absolute inset-0 z-0 w-full h-full object-cover"
+                width={1920}
+                height={1080}
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="metadata"
               >
-                <div className="w-10 h-10 rounded-full bg-gold-gradient flex items-center justify-center text-primary-foreground font-body font-bold text-sm mb-4">
-                  {step.num}
+                <source src="https://res.cloudinary.com/dwfnlobmq/video/upload/v1776050574/2nd_Banner_Video_1_k7laz0.mp4" type="video/mp4" />
+                Indra Properties premium video
+              </video>
+              <div className="pointer-events-none relative z-10 container mx-auto px-4">
+                <SectionHeading
+                  title="How We Work"
+                  subtitle="Simple & Transparent Process"
+                  titleClassName="text-white"
+                  subtitleClassName="text-white"
+                />
+                <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {processSteps.map((step, i) => (
+                    <motion.div
+                      key={step.num}
+                      initial={{ opacity: 0, y: 25 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: i * 0.08 }}
+                      className="glass-card rounded-lg p-6 relative overflow-hidden"
+                    >
+                      <div className="w-10 h-10 rounded-full bg-gold-gradient flex items-center justify-center text-primary-foreground font-body font-bold text-sm mb-4">
+                        {step.num}
+                      </div>
+                      <h3 className="font-display text-base font-semibold text-foreground mb-2">
+                        {step.title}
+                      </h3>
+                      <p className="text-muted-foreground font-body text-sm">{step.desc}</p>
+                    </motion.div>
+                  ))}
                 </div>
-                <h3 className="font-display text-base font-semibold text-foreground mb-2">
-                  {step.title}
-                </h3>
-                <p className="text-muted-foreground font-body text-sm">{step.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
+              </div>
+            </section>
       {/* Testimonials */}
       <section className="py-20 bg-secondary">
         <div className="container mx-auto px-4">

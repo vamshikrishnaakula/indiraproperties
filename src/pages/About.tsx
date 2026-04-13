@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 import mdPhoto from "@/assets/md-photo.jpg";
+import gallery6 from "@/assets/Our-team/Managing-Director-Sai-Krishna-Somisetty.png";
 
 const whyChoose = [
   "15+ years of industry experience",
@@ -129,11 +130,11 @@ const About = () => {
               viewport={{ once: true }}
               className="mx-auto"
             >
-              <div className="w-64 h-80 rounded-lg overflow-hidden border-2 border-gold shadow-gold">
+              <div className="w-84 h-80 rounded-lg overflow-hidden border-2 border-gold shadow-gold bg-white">
                 <img
-                  src={mdPhoto}
+                  src={gallery6}
                   alt="Managing Director of Indra Properties"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                   loading="lazy"
                   width={600}
                   height={800}

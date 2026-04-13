@@ -6,32 +6,32 @@
 
 @layer base {
   :root {
-    --background: 222 47% 6%;
-    --foreground: 40 20% 92%;
+    --background: 0 0% 100%;
+    --foreground: 222 47% 6%;
 
-    --card: 222 40% 10%;
-    --card-foreground: 40 20% 92%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 6%;
 
-    --popover: 222 40% 10%;
-    --popover-foreground: 40 20% 92%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 6%;
 
     --primary: 43 74% 49%;
-    --primary-foreground: 222 47% 6%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 222 30% 16%;
-    --secondary-foreground: 40 20% 92%;
+    --secondary: 0 0% 100%;
+    --secondary-foreground: 222 47% 6%;
 
-    --muted: 222 30% 14%;
-    --muted-foreground: 220 15% 55%;
+    --muted: 210 16% 92%;
+    --muted-foreground: 222 47% 18%;
 
     --accent: 43 74% 49%;
-    --accent-foreground: 222 47% 6%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 222 25% 18%;
-    --input: 222 25% 18%;
+    --border: 220 14% 90%;
+    --input: 0 0% 100%;
     --ring: 43 74% 49%;
 
     --radius: 0.5rem;
@@ -40,7 +40,7 @@
     --gold-light: 43 80% 65%;
     --gold-dark: 43 70% 35%;
     --navy: 222 47% 6%;
-    --navy-light: 222 40% 12%;
+    --navy-light: 0 0% 95%;
 
     --font-display: 'Playfair Display', serif;
     --font-body: 'Raleway', sans-serif;
@@ -79,7 +79,7 @@
   }
 
   .bg-navy-gradient {
-    background: linear-gradient(180deg, hsl(222 47% 6%) 0%, hsl(222 40% 10%) 100%);
+    background: linear-gradient(180deg, hsl(0 0% 98%) 0%, hsl(0 0% 96%) 100%);
   }
 
   .shadow-gold {
@@ -87,8 +87,8 @@
   }
 
   .glass-card {
-    background: hsl(222 40% 10% / 0.8);
+    background: hsl(0 0% 100% / 0.9);
     backdrop-filter: blur(12px);
-    border: 1px solid hsl(222 25% 18%);
+    border: 1px solid hsl(220 14% 90%);
   }
 }
