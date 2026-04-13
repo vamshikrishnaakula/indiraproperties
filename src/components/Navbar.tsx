@@ -70,7 +70,8 @@ const Navbar = () => {
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden text-white"
+            className="lg:hidden rounded-md p-2 text-white transition-colors hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-white/40"
+            aria-label={isOpen ? "Close menu" : "Open menu"}
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -91,10 +92,10 @@ const Navbar = () => {
                   key={link.to}
                   to={link.to}
                   onClick={() => setIsOpen(false)}
-                  className={`font-body text-sm font-medium tracking-wider uppercase py-2 ${
+                  className={`font-body text-sm font-medium tracking-wider uppercase py-2 transition-colors ${
                     location.pathname === link.to
-                      ? "text-primary"
-                      : "text-foreground/70"
+                      ? "text-white"
+                      : "text-white hover:text-white focus:text-white"
                   }`}
                 >
                   {link.label}
