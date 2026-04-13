@@ -53,20 +53,20 @@ const Footer = () => {
             <div className="space-y-3 text-sm font-body">
               <a
                 href="tel:+919885353637"
-                className="flex items-center gap-3 text-muted-foreground/70 hover:text-primary transition-colors"
+                className="flex items-center gap-3 text-foreground text-sm whitespace-nowrap hover:text-primary transition-colors"
               >
                 <Phone className="w-5 h-5 text-primary" />
                 +91 9885353637
               </a>
               <a
-                href="mailto: indraproperties0005@gmail.com"
-                className="flex items-center gap-3 text-muted-foreground/70 hover:text-primary transition-colors"
+                href="mailto:indraproperties0005@gmail.com"
+                className="flex items-center gap-3 text-foreground text-sm whitespace-nowrap hover:text-primary transition-colors"
               >
                 <Mail className="w-5 h-5 text-primary" />
-                 indraproperties0005@gmail.com
+                indraproperties0005@gmail.com
               </a>
-              <div className="flex items-start gap-3 text-muted-foreground/70">
-                <MapPin className="w-5 h-5 text-primary mt-1" />
+              <div className="flex items-center gap-3 text-foreground text-sm">
+                <MapPin className="w-5 h-5 text-primary" />
                 <span>Gudur, Andhra Pradesh 524412</span>
               </div>
             </div>
@@ -90,7 +90,7 @@ const Footer = () => {
 
         <div className="border-t border-border mt-12 pt-8 text-center">
           <p className="text-muted-foreground/70 text-xs font-body">
-            © {new Date().getFullYear()} Indra Properties. All rights reserved.
+            © {new Date().getFullYear()} Indra Properties. All rights reserved.by @shark kreations.
           </p>
         </div>
       </div>
