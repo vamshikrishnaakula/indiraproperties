@@ -37,9 +37,11 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
             height={550}
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
           />
-          <div className="absolute top-4 right-4 bg-gold-gradient text-primary-foreground text-xs font-body font-bold px-3 py-1 rounded-full">
-            {project.status}
-          </div>
+          {project.status ? (
+            <div className="absolute top-4 right-4 bg-gold-gradient text-primary-foreground text-xs font-body font-bold px-3 py-1 rounded-full">
+              {project.status}
+            </div>
+          ) : null}
         </div>
         <div className="p-5">
           <h3 className="font-display text-xl font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">

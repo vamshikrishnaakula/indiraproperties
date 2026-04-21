@@ -122,6 +122,7 @@ const Index = () => {
           />
           Indra Properties premium open plots video background
         </video>
+        <div className="absolute inset-0 bg-black/10" />
         {/* <div className="absolute left-4 top-4 z-20 rounded-full bg-black/30 px-4 py-3 text-left shadow-lg shadow-black/20 backdrop-blur-sm sm:left-6 sm:top-6"></div> */}
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.p
@@ -181,7 +182,7 @@ const Index = () => {
             </a>
             <Link
               to="/contact"
-              className="border border-gold text-primary px-8 py-3.5 rounded-md font-body font-semibold text-sm tracking-wide hover:bg-primary hover:text-primary-foreground transition-all"
+              className="bg-gold-gradient text-primary-foreground px-8 py-3.5 rounded-md font-body font-semibold text-sm tracking-wide flex items-center justify-center gap-2 hover:opacity-90 transition-opacity"
             >
               Book Free Site Visit
             </Link>
@@ -284,7 +285,7 @@ const Index = () => {
       <section className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
           <SectionHeading
-            title=" Main Projects"
+            title="Projects"
             subtitle="Discover the Best Open Plot Projects in Andra Pradesh"
           />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
