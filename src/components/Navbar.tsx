@@ -36,7 +36,7 @@ const Navbar = () => {
       initial={{ opacity: 0, y: -80 }}
       animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : -80 }}
       transition={{ duration: 0.3, ease: "easeOut" }}
-      className="fixed top-0 left-0 right-0 z-50 bg-black/95 border-b border-white/10"
+      className="fixed top-0 left-0 right-0 z-50 bg-white/95 border-b border-white/10"
       style={{ pointerEvents: isVisible ? "auto" : "none" }}
     >
       <div className="container mx-auto px-4">
@@ -53,7 +53,7 @@ const Navbar = () => {
                 className={`font-body text-sm font-medium tracking-wider uppercase transition-colors duration-300 ${
                   location.pathname === link.to
                     ? "text-primary"
-                    : "text-white/70 hover:text-white"
+                    : "text-black hover:text-gold focus:text-black/90"
                 }`}
               >
                 {link.label}

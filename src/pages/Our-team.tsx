@@ -84,7 +84,7 @@ const Gallery = () => {
                     src={img.src}
                     alt={img.alt}
                     loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-200 group-hover:scale-110"
+                    className="w-full object-cover transition-transform duration-200 group-hover:scale-110" style={{ height: "250px" }}
                   />
                 </div>
                 <h3 className="mt-4 font-display text-xl font-semibold text-foreground">

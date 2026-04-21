@@ -130,7 +130,7 @@ const About = () => {
               viewport={{ once: true }}
               className="mx-auto"
             >
-              <div className="w-84 h-80 rounded-lg overflow-hidden border-2 border-gold shadow-gold bg-white">
+              <div className="w-full h-full rounded-lg overflow-hidden border-2 border-gold shadow-gold bg-white">
                 <img
                   src={gallery6}
                   alt="Managing Director of Indra Properties"

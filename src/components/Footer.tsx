@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="grid gap-4 lg:grid-cols-[1.4fr_0.85fr_0.85fr_0.95fr_2.2fr] lg:items-start">
           <div>
             <Link to="/" className="inline-block mb-4">
-              <img src={logo} alt="Indra Properties" className="h-16 w-auto" />
+              <img src={logo} alt="Indra Properties" className="w-auto" style={{ height: "8rem" }} />
             </Link>
             <p className="text-muted-foreground/70 font-body text-sm leading-relaxed max-w-md">
               Your trusted real estate advisory partner in Chillakuru. We help you make confident property decisions with clarity and care.
