@@ -42,7 +42,11 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center gap-2">
-            <img src={logo} alt="Indra Properties" className="h-14 w-auto" />
+            <img
+              src={logo}
+              alt="Indra Properties"
+              className="h-14 w-auto rounded-sm shadow-lg shadow-black/30"
+            />
           </Link>
 
           <div className="hidden lg:flex items-center gap-8">
@@ -70,7 +74,7 @@ const Navbar = () => {
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden rounded-md p-2 text-white transition-colors hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-white/40"
+            className="lg:hidden rounded-md p-2 text-black transition-colors hover:bg-black/5 hover:text-black focus:outline-none focus:ring-2 focus:ring-black/20"
             aria-label={isOpen ? "Close menu" : "Open menu"}
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -84,7 +88,7 @@ const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-black/95 border-t border-white/10"
+            className="lg:hidden bg-white border-t border-black/10 shadow-lg"
           >
             <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
               {navLinks.map((link) => (
@@ -92,10 +96,10 @@ const Navbar = () => {
                   key={link.to}
                   to={link.to}
                   onClick={() => setIsOpen(false)}
-                  className={`font-body text-sm font-medium tracking-wider uppercase py-2 transition-colors ${
+                  className={`rounded-md px-2 py-2 font-body text-sm font-medium tracking-wider uppercase transition-colors ${
                     location.pathname === link.to
-                      ? "text-white"
-                      : "text-white hover:text-white focus:text-white"
+                      ? "bg-black/5 text-primary"
+                      : "text-black hover:bg-black/5 hover:text-primary focus:bg-black/5 focus:text-primary"
                   }`}
                 >
                   {link.label}

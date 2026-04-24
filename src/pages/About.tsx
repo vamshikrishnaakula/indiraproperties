@@ -3,6 +3,7 @@ import { CheckCircle } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 import mdPhoto from "@/assets/md-photo.jpg";
 import gallery6 from "@/assets/Our-team/Managing-Director-Sai-Krishna-Somisetty.png";
+import mDphoto from "@/assets/Our-team/Managing-Director-Sai-Krishna.jpeg";
 
 const whyChoose = [
   "15+ years of industry experience",
@@ -132,12 +133,12 @@ const About = () => {
             >
               <div className="w-full h-full rounded-lg overflow-hidden border-2 border-gold shadow-gold bg-white">
                 <img
-                  src={gallery6}
+                  src={mDphoto}
                   alt="Managing Director of Indra Properties"
                   className="w-full h-full object-contain"
                   loading="lazy"
-                  width={600}
-                  height={800}
+                  width={500}
+                  height={500}
                 />
               </div>
               <div className="text-center mt-4">
