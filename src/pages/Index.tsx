@@ -4,8 +4,6 @@ import {
   ArrowRight, Shield, Users, Award, Building, Search, MapPin, Home,
   Handshake, FileCheck, Eye, TrendingUp, ChevronRight, Star, HelpCircle,
 } from "lucide-react";
-// import heroBg from "@/assets/hero-bg.jpg";
-import heroBg from "@/assets/main-video-DFRO3I1J.mp4";
 import brochurePdf from "@/assets/Sai Highway Dream Houses _ Brochure Final V (1).pdf";
 import { projects } from "@/data/projects";
 // import { projects  } from "@/data/mainprojects";
@@ -107,7 +105,23 @@ const Index = () => {
           muted
         /> */}
         <video
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 h-full w-full object-cover md:hidden"
+          width={720}
+          height={1280}
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+        >
+          <source
+            src="https://res.cloudinary.com/dwfnlobmq/video/upload/v1776999988/Mobile_Alignment_Video_1_ew0pwd.mp4"
+            type="video/mp4"
+          />
+          Indra Properties premium open plots mobile video background
+        </video>
+        <video
+          className="absolute inset-0 hidden h-full w-full object-cover md:block"
           width={1920}
           height={1080}
           autoPlay

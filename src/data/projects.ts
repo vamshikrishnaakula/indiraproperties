@@ -54,7 +54,7 @@ export const projects: Project[] = [
   {
     id: "Sai-Happy-Homes",
     name: "Sai Happy Homes",
-    location: "Nellore, Gudur Mandal, Village:Nellature",
+    location: "Nellore, Gudur Mandal, Village:Nellaturu",
     image: project2,
     description:
       "Nestled amidst lush greenery, Indra Green Valley offers a serene retreat with modern infrastructure. DTCP approved plots with clear titles, perfect for building your dream home in a peaceful environment close to nature.",
@@ -78,9 +78,10 @@ export const projects: Project[] = [
 
     status_1: "Phase 1 Completed",
     status_2: "Phase 2 Completed",
+    status: "Open for Booking",
     
     gallery: "/Sai-homes-gallery",
     mapEmbed:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3869.1072148006756!2d79.8678917!3d14.129791899999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4ce30015c1ec49%3A0x5eb9eabdabb3f653!2sIndra%20properties!5e0!3m2!1sen!2sus!4v1775364422417!5m2!1sen!2sus",
+      "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3868.746522900011!2d79.81590647509758!3d14.150994286283819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTTCsDA5JzAzLjYiTiA3OcKwNDknMDYuNSJF!5e0!3m2!1sen!2sus!4v1777000513681!5m2!1sen!2sus",
   },
 ];
