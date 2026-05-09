@@ -23,7 +23,7 @@ const ProjectDetail = () => {
 
   const galleryLinks = Array.isArray(project.gallery)
     ? project.gallery.map((_, index) => ({
-        label: `Phase ${index + 1}`,
+        label: `Phase ${index + 1} Gallery`,
         href: `/Sai-highway-dreamhouses-phase-${index + 1}`,
       }))
     : [{ label: "View Gallery", href: project.gallery }];
@@ -83,7 +83,9 @@ const ProjectDetail = () => {
                       {link.label}
                     </Link>
                   ))}
-                   <button className="inline-flex items-center justify-center gap-2 rounded-md bg-gold-gradient px-5 py-3 text-sm font-body font-semibold text-primary-foreground transition-all hover:shadow-gold">Phase 3 Ongoing...</button>
+                  {project.id === "Sai-Happy-Homes" && (
+                    <button className="inline-flex items-center justify-center gap-2 rounded-md bg-gold-gradient px-5 py-3 text-sm font-body font-semibold text-primary-foreground transition-all hover:shadow-gold">Phase 3 Ongoing...</button>
+                  )}
                 </div>
               )}
               

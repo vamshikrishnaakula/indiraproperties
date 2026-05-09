@@ -6,6 +6,7 @@ import SectionHeading from "@/components/SectionHeading";
 import gallery1 from "@/assets/Highway_houses_phase-2/19.png";
 import gallery2 from "@/assets/Highway_houses_phase-2/BWEDITING0002T01.JPG";
 import gallery3 from "@/assets/Highway_houses_phase-2/BWEDITING0008T01.JPG";
+import gallery28 from "@/assets/main_features/18.png";
 import gallery4 from "@/assets/Highway_houses_phase-2/BWEDITING0015T01.JPG";
 import gallery5 from "@/assets/Highway_houses_phase-2/BWEDITING0016T01.JPG";
 import gallery6 from "@/assets/Highway_houses_phase-2/BWEDITING0017T01.JPG";
@@ -28,19 +29,20 @@ import gallery22 from "@/assets/Highway_houses_phase-2/C8147T01.JPG";
 
 
 const images = [
-  { src: gallery1, alt: "Indra Golden City aerial view" },
+  { src: gallery1, alt: "Sai Highway Dream Houses aerial view" },
   { src: gallery2, alt: "Site development in progress" },
   { src: gallery3, alt: "Indra Green Valley entrance" },
+  { src: gallery28, alt: "Completed infrastructure1" },
   { src: gallery4, alt: "Completed infrastructure" },
   { src: gallery5, alt: "Indra Hill View panoramic" },
   { src: gallery6, alt: "Premium villa plots aerial" },
-  { src: gallery7, alt: "Indra Golden City aerial view" },
+  { src: gallery7, alt: "Sai Highway Dream Houses aerial view" },
   { src: gallery8, alt: "Site development in progress" },
   { src: gallery9, alt: "Indra Green Valley entrance" },
   { src: gallery10, alt: "Completed infrastructure" },
   { src: gallery11, alt: "Indra Hill View panoramic" },
   { src: gallery12, alt: "Premium villa plots aerial" },
-  { src: gallery13, alt: "Indra Golden City aerial view" },
+  { src: gallery13, alt: "Sai Highway Dream Houses aerial view" },
   { src: gallery14, alt: "Site development updates" },
   { src: gallery15, alt: "Hill View residential" },
   { src: gallery16, alt: "Completed infrastructure" },
@@ -48,8 +50,6 @@ const images = [
   { src: gallery18, alt: "Indra Hill View panoramic" },
   { src: gallery19, alt: "Indra Hill View panoramic" },
   { src: gallery20, alt: "Site development updates" },
-  { src: gallery21, alt: "Indra Hill View panoramic" },
-  { src: gallery22, alt: "Hill View residential" },
 ];
 
 const SaiPhase2 = () => {

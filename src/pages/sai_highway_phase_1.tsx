@@ -6,19 +6,19 @@ import SectionHeading from "@/components/SectionHeading";
 import gallery1 from "@/assets/main_features/main_kaman.png";
 import gallery3 from "@/assets/main_features/9.JPG";
 import gallery5 from "@/assets/main_features/11.png";
-import gallery8 from "@/assets/main_features/18.png";
+// import gallery8 from "@/assets/main_features/18.png";
 import gallery10 from "@/assets/main_features/15.png";
 import gallery14 from "@/assets/main_features/14.png";
 import gallery15 from "@/assets/main_features/C0693T01.JPG";
 
 const images = [
-  { src: gallery1, alt: "Indra Golden City aerial view" },
+  { src: gallery1, alt: "Sai Highway Dream Houses aerial view" },
+  { src: gallery15, alt: "Hill View residential" },
   { src: gallery3, alt: "Indra Green Valley entrance" },
   { src: gallery5, alt: "Indra Hill View panoramic" },
-  { src: gallery8, alt: "Site development in progress" },
+  // { src: gallery8, alt: "Site development in progress" },
   { src: gallery10, alt: "Completed infrastructure" },
   { src: gallery14, alt: "Site development updates" },
-  { src: gallery15, alt: "Hill View residential" },
 ];
 
 const SaiPhase1 = () => {

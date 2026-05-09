@@ -28,14 +28,14 @@ const stats = [
 const services = [
   { icon: Search, title: "Plot Consultation", desc: "We understand your requirements and recommend the best open plots based on budget, location, and investment goals." },
   { icon: Eye, title: "Site Visit Assistance", desc: "We arrange guided site visits so you can explore projects and evaluate options before making decisions." },
-  { icon: FileCheck, title: "Legal & Title Verification", desc: "Complete information about DTCP approvals, title clearance, land documentation, and legal compliance." },
+  { icon: FileCheck, title: "Legal & Title Verification", desc: "Complete information about NUDA & GMC approvals, title clearance, land documentation, and legal compliance." },
   { icon: Handshake, title: "End-to-End Buying Support", desc: "From plot selection to registration, our team ensures a smooth and hassle-free buying experience." },
   { icon: TrendingUp, title: "Investment Advisory", desc: "We help investors identify high-growth corridors and future hotspots in Andra Pradesh for maximum ROI." },
   { icon: Home, title: "Post-Sale Support", desc: "Continued assistance with construction guidance, resale support, and property management after purchase." },
 ];
 
 const whyChoose = [
-  "100% DTCP & RERA Approved Projects",
+  "100% NUDA & GMC Approved Projects",
   "Transparent & Clear Title Documentation",
   "15+ Years of Industry Experience",
   "Trusted by 2,500+ Happy Families",
@@ -45,7 +45,7 @@ const whyChoose = [
 ];
 
 const investmentZones = [
-  { name: "Vizag", growth: "Very High", roi: "15-20%" },
+  { name: "Gudur", growth: "Very High", roi: "15-20%" },
   { name: "Kandukur", growth: "High", roi: "12-16%" },
   { name: "Amaravathi", growth: "High", roi: "12-15%" },
   { name: "Srisailam Highway", growth: "Emerging", roi: "10-15%" },
@@ -64,28 +64,28 @@ const processSteps = [
 
 const testimonials = [
   {
-    text: "Indra Properties helped us find the perfect plot near Vizag. Their guidance made the process very easy and stress-free. Highly recommended!",
-    name: "Koti kumar",
+    text: "Indra Properties helped us find the perfect plot near Gudur. Their guidance made the process very easy and stress-free. Highly recommended!",
+    name: "Koti ",
     location: "Nellore",
   },
   {
-    text: "Very transparent dealings and excellent infrastructure in their projects. We invested in Indra Golden City and are very happy with the appreciation.",
+    text: "Very transparent dealings and excellent infrastructure in their projects. We invested in Indra Sai Highway Dream Houses and are very happy with the appreciation.",
     name: "Priya Sharma",
-    location: "Thirupathi",
+    location: "Tirupati",
   },
   {
     text: "The team was professional and supportive throughout. Clear titles, proper documentation — everything was smooth. Best real estate company in Andra Pradesh!",
     name: "Venkata Rao",
-    location: "Kandukur",
+    location: "Naidupeta",
   },
 ];
 
 const faqs = [
-  { q: "Are all your projects DTCP approved?", a: "Yes, all our projects are 100% DTCP approved with clear title documentation. We ensure complete legal compliance for every project." },
-  { q: "What is the minimum investment required?", a: "Our plots start from ₹9,999/sq.yd onwards depending on the project location. We have options to suit various budgets." },
+  { q: "Are all your projects NUDA approved?", a: "Yes, all our projects are 100% NUDA approved with clear title documentation. We ensure complete legal compliance for every project." },
+  { q: "What is the minimum investment required?", a: "Our plots start from ₹14,999/sq.yd onwards depending on the project location. We have options to suit various budgets." },
   { q: "Do you arrange site visits?", a: "Absolutely! We provide free guided site visits with pickup and drop facility from Chillakuru for all our projects." },
-  { q: "What areas do your projects cover?", a: "We have projects across key growth corridors in Andra Pradesh including Vizag, Kandukur, Amaravathi, and Chillakuru Highway." },
-  { q: "Do you help with bank loans?", a: "Yes, we have tie-ups with major banks and can assist with home/plot loan approvals for eligible customers." },
+  { q: "What areas do your projects cover?", a: "We have projects across key growth corridors in Andra Pradesh including Gudur, Kandukur, Amaravathi, and Chillakuru Highway." },
+  { q: "Do you help with bank loans?", a: "No, we have not tie-ups with major banks and can assist with home/plot loan approvals for eligible customers." },
   { q: "What is the booking process?", a: "You can book a plot with a token advance. Our team handles all documentation, legal verification, and registration process end-to-end." },
 ];
 
@@ -163,7 +163,7 @@ const Index = () => {
             transition={{ delay: 0.5 }}
             className="text-white font-body max-w-xl mx-auto mb-10 text-base md:text-lg"
           >
-            Invest in DTCP-approved open plots at prime locations with
+            Invest in NUDA & GMC-approved open plots at prime locations with
             world-class amenities and guaranteed returns.
           </motion.p>
           <motion.div

@@ -24,7 +24,7 @@ export const projects: Project[] = [
     location: "Nellore District, Gudur",
     image: project1,
     description:
-      "Experience premium living at Indra Golden City — a thoughtfully planned gated community with world-class infrastructure, wide 40ft & 30ft BT roads, avenue plantation, and all modern amenities. Located on the booming Chillakuru Highway corridor with excellent connectivity.",
+      "Experience premium living at Sai Highway Dream Houses — a thoughtfully planned gated community with world-class infrastructure, wide 40ft & 30ft BT roads, avenue plantation, and all modern amenities. Located on the booming Chillakuru Highway corridor with excellent connectivity.",
     amenities: [
       "Prime Location",
       "Excellent Connectivity",
@@ -38,7 +38,7 @@ export const projects: Project[] = [
     ],
     locationAdvantages: [
       "Nellore District, Gudur",
-      "Behind Chillakuru Police Station",
+      "Behind Chillakuru Police Station,NH16",
       "Free Site Visit Available",
     ],
     status: "Open for Booking",
@@ -57,7 +57,7 @@ export const projects: Project[] = [
     location: "Nellore, Gudur Mandal, Village:Nellaturu",
     image: project2,
     description:
-      "Nestled amidst lush greenery, Indra Green Valley offers a serene retreat with modern infrastructure. DTCP approved plots with clear titles, perfect for building your dream home in a peaceful environment close to nature.",
+      "Nestled amidst lush greenery, Indra Green Valley offers a serene retreat with modern infrastructure. NUDA approved plots with clear titles, perfect for building your dream home in a peaceful environment close to nature.",
     amenities: [
       "Prime Location",
       "Excellent Connectivity",
@@ -72,7 +72,7 @@ export const projects: Project[] = [
     ],
     locationAdvantages: [
       "Nellore District, Gudur",
-      "Behind Chillakuru Police Station",
+      "Nellaturu Village",
       "Free Site Visit Available",
     ],
 

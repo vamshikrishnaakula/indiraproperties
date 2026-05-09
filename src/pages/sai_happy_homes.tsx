@@ -21,21 +21,21 @@ import gallery15 from "@/assets/sai_Happy_homes/IMG_20260406_143821.jpg.jpeg";
 
 
 const images = [
-  { src: gallery1, alt: "Indra Golden City aerial view" },
+  { src: gallery1, alt: "Sai Highway Dream Houses aerial view" },
   { src: gallery2, alt: "Indra Green Valley entrance" },
   { src: gallery3, alt: "Indra Hill View panoramic" },
   { src: gallery4, alt: "Site development in progress" },
   { src: gallery5, alt: "Indra Green Valley entrance" },
   { src: gallery6, alt: "Completed infrastructure" },
   { src: gallery7, alt: "Site development updates" },
-  { src: gallery8, alt: "Indra Golden City aerial view" },
+  { src: gallery8, alt: "Sai Highway Dream Houses aerial view" },
   { src: gallery9, alt: "Indra Green Valley entrance" },
   { src: gallery10, alt: "Indra Hill View panoramic" },
   { src: gallery11, alt: "Site development in progress" },
   { src: gallery12, alt: "Indra Green Valley entrance" },
   { src: gallery13, alt: "Completed infrastructure" },
   { src: gallery14, alt: "Site development updates" },
-  { src: gallery15, alt: "Indra Golden City aerial view" },
+  { src: gallery15, alt: "Sai Highway Dream Houses aerial view" },
 ];
 
 const Gallery = () => {

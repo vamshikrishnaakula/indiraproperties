@@ -7,7 +7,7 @@ import mDphoto from "@/assets/Our-team/Managing-Director-Sai-Krishna.jpeg";
 
 const whyChoose = [
   "15+ years of industry experience",
-  "100% DTCP & RERA approved projects",
+  "100% NUDA & GMC approved projects",
   "Transparent & clear title documentation",
   "Prime locations with high appreciation",
   "World-class infrastructure & amenities",

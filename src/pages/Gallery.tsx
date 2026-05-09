@@ -20,19 +20,19 @@ import gallery14 from "@/assets/main_features/14.png";
 import gallery15 from "@/assets/main_features/8.JPG";
 
 const images = [
-  { src: gallery1, alt: "Indra Golden City aerial view" },
+  { src: gallery1, alt: "Sai Highway Dream Houses aerial view" },
   { src: gallery2, alt: "Site development in progress" },
   { src: gallery3, alt: "Indra Green Valley entrance" },
   { src: gallery4, alt: "Completed infrastructure" },
   { src: gallery5, alt: "Indra Hill View panoramic" },
   { src: gallery6, alt: "Premium villa plots aerial" },
-  { src: gallery7, alt: "Indra Golden City aerial view" },
+  { src: gallery7, alt: "Sai Highway Dream Houses aerial view" },
   { src: gallery8, alt: "Site development in progress" },
   { src: gallery9, alt: "Indra Green Valley entrance" },
   { src: gallery10, alt: "Completed infrastructure" },
   { src: gallery11, alt: "Indra Hill View panoramic" },
   { src: gallery12, alt: "Premium villa plots aerial" },
-  { src: gallery13, alt: "Indra Golden City aerial view" },
+  { src: gallery13, alt: "Sai Highway Dream Houses aerial view" },
   { src: gallery14, alt: "Site development updates" },
   { src: gallery15, alt: "Hill View residential" },
 ];
