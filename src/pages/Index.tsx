@@ -84,7 +84,7 @@ const faqs = [
   { q: "Are all your projects NUDA approved?", a: "Yes, all our projects are 100% NUDA approved with clear title documentation. We ensure complete legal compliance for every project." },
   { q: "What is the minimum investment required?", a: "Our plots start from ₹14,999/sq.yd onwards depending on the project location. We have options to suit various budgets." },
   { q: "Do you arrange site visits?", a: "Absolutely! We provide free guided site visits with pickup and drop facility from Chillakuru for all our projects." },
-  { q: "What areas do your projects cover?", a: "We have projects across key growth corridors in Andra Pradesh including Gudur, Kandukur, Amaravathi, and Chillakuru Highway." },
+  { q: "What areas do your projects cover?", a: "We have projects across key growth corridors in Andra Pradesh including Gudur, Chillakuru Highway." },
   { q: "Do you help with bank loans?", a: "No, we have not tie-ups with major banks and can assist with home/plot loan approvals for eligible customers." },
   { q: "What is the booking process?", a: "You can book a plot with a token advance. Our team handles all documentation, legal verification, and registration process end-to-end." },
 ];
